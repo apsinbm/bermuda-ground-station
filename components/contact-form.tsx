@@ -197,7 +197,7 @@ export function ContactForm({ className }: ContactFormProps) {
                 id="phoneNumber"
                 type="tel"
                 {...register('phoneNumber')}
-                placeholder="+1-441-705-1547"
+                placeholder="+1-310-363-6000"
                 className={errors.phoneNumber ? 'border-red-500' : ''}
                 aria-invalid={errors.phoneNumber ? 'true' : 'false'}
                 aria-describedby={errors.phoneNumber ? 'phoneNumber-error' : undefined}
