@@ -125,7 +125,7 @@ export default async function Image() {
               lineHeight: 1.4,
             }}
           >
-            Strategic North Atlantic Location for Satellite Communications
+            Hamilton, Bermuda - Strategic Satellite Gateway
           </p>
           <div
             style={{

@@ -339,25 +339,6 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="bg-primary py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white">
-            Ready to Get Started?
-          </h2>
-          <p className="mt-4 text-lg text-primary-foreground/90">
-            Contact us to discuss your hosting requirements.
-          </p>
-          <div className="mt-8">
-            <Link href="/contact">
-              <Button size="lg" variant="secondary" className="group">
-                Contact Our Team
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
     </>
   );
 }

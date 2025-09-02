@@ -97,9 +97,9 @@ export function ContactForm({ className }: ContactFormProps) {
   return (
     <Card className={className}>
       <CardHeader>
-        <CardTitle>Contact Us</CardTitle>
+        <CardTitle>Inquiry Form</CardTitle>
         <CardDescription>
-          Tell us about your ground station requirements and we&apos;ll get back to you within 24 hours.
+          Provide your requirements and we will respond with a technical proposal within 24 hours.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -432,7 +432,7 @@ export function ContactForm({ className }: ContactFormProps) {
                 Submitting...
               </>
             ) : (
-              'Submit Request'
+              'Submit'
             )}
           </Button>
         </form>

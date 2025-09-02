@@ -179,7 +179,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
-                Strategic North Atlantic Location
+                Hamilton, Bermuda
               </h2>
               <p className="text-lg text-white/90 mb-8">
                 Bermuda's unique position in the North Atlantic Ocean, 700+ miles off the North American 
@@ -276,14 +276,6 @@ export default function HomePage() {
               resilience, expanding coverage, or seeking a secure hosting environment, we are here to 
               support your mission.
             </p>
-            <div className="mt-10">
-              <Link href="/contact">
-                <Button size="lg" variant="secondary" className="group">
-                  Get in Touch
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       </section>

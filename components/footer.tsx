@@ -40,12 +40,8 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                <span>North Atlantic Location</span>
+                <span>Hamilton, Bermuda</span>
               </div>
-              <Link href="/contact" className="inline-flex items-center space-x-2 text-sm bg-primary/10 hover:bg-primary/20 text-primary px-3 py-2 rounded-md transition-colors">
-                <Mail className="h-4 w-4" />
-                <span>Contact Our Team</span>
-              </Link>
             </div>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
