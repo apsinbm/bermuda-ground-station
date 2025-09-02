@@ -1,0 +1,99 @@
+import Link from 'next/link';
+import { Satellite, Mail, Phone, MapPin } from 'lucide-react';
+
+const footerNavigation = {
+  main: [
+    { name: 'Services', href: '/services' },
+    { name: 'Locations', href: '/locations' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+  ],
+  legal: [
+    { name: 'Privacy Policy', href: '/legal/privacy' },
+    { name: 'Terms of Service', href: '/legal/terms' },
+  ],
+};
+
+export function Footer() {
+  return (
+    <footer className="bg-muted/50 border-t">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+          <div className="space-y-8 xl:col-span-1">
+            <Link href="/" className="flex items-center space-x-2">
+              <Satellite className="h-8 w-8 text-primary" />
+              <span className="text-xl font-bold">
+                Bermuda Ground Station
+              </span>
+            </Link>
+            <p className="text-sm text-muted-foreground max-w-md">
+              Strategic satellite antenna hosting in Bermuda&apos;s North Atlantic location. 
+              Professional ground station services with regulatory support and 
+              transatlantic connectivity.
+            </p>
+            <div className="space-y-2">
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4" />
+                <span>Hamilton, Bermuda</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Phone className="h-4 w-4" />
+                <span>+1 (441) 555-0123</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <Mail className="h-4 w-4" />
+                <span>info@bermuda-ground-station.com</span>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+            <div>
+              <h3 className="text-sm font-semibold text-foreground">
+                Navigation
+              </h3>
+              <ul role="list" className="mt-4 space-y-4">
+                {footerNavigation.main.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold text-foreground">
+                Legal
+              </h3>
+              <ul role="list" className="mt-4 space-y-4">
+                {footerNavigation.legal.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="mt-12 border-t pt-8">
+          <div className="flex items-center justify-between">
+            <p className="text-xs text-muted-foreground">
+              &copy; {new Date().getFullYear()} Bermuda Ground Station Hosting. All rights reserved.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Proudly serving from Bermuda&apos;s strategic North Atlantic location
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

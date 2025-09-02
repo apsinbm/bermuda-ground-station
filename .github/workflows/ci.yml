@@ -1,0 +1,203 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Test & Quality Checks
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run TypeScript check
+      run: npx tsc --noEmit
+
+    - name: Run ESLint
+      run: npm run lint
+
+    - name: Build application
+      run: npm run build
+      env:
+        NEXT_PUBLIC_SITE_URL: https://bermuda-ground-station.com
+
+    - name: Install Playwright Browsers
+      run: npx playwright install chromium
+
+    - name: Run Playwright tests
+      run: npm run test
+      env:
+        PLAYWRIGHT_BASE_URL: http://localhost:3000
+
+    - name: Upload Playwright Report
+      uses: actions/upload-artifact@v4
+      if: failure()
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30
+
+  lighthouse:
+    name: Lighthouse Audit
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build application
+      run: npm run build
+      env:
+        NEXT_PUBLIC_SITE_URL: https://bermuda-ground-station.com
+
+    - name: Run Lighthouse CI
+      run: |
+        npm install -g @lhci/cli
+        lhci autorun
+      env:
+        LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+    - name: Upload Lighthouse Results
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: lighthouse-results
+        path: lighthouse-results/
+        retention-days: 30
+
+  accessibility:
+    name: Accessibility Audit
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build and start application
+      run: |
+        npm run build
+        npm run start &
+        sleep 10
+      env:
+        NEXT_PUBLIC_SITE_URL: https://bermuda-ground-station.com
+
+    - name: Run Pa11y accessibility tests
+      run: npm run a11y
+
+  security:
+    name: Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run npm audit
+      run: npm audit --audit-level=moderate
+
+    - name: Run CodeQL Analysis
+      uses: github/codeql-action/init@v3
+      with:
+        languages: typescript, javascript
+
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v3
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
+
+  deploy-staging:
+    name: Deploy to Staging
+    runs-on: ubuntu-latest
+    needs: [test, lighthouse, accessibility]
+    if: github.ref == 'refs/heads/develop' && github.event_name == 'push'
+    environment: staging
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Deploy to Vercel
+      uses: amondnet/vercel-action@v25
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }}
+        vercel-org-id: ${{ secrets.ORG_ID }}
+        vercel-project-id: ${{ secrets.PROJECT_ID }}
+        working-directory: ./
+        scope: ${{ secrets.TEAM_ID }}
+
+  deploy-production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    needs: [test, lighthouse, accessibility, security]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    environment: production
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Deploy to Vercel
+      uses: amondnet/vercel-action@v25
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }}
+        vercel-org-id: ${{ secrets.ORG_ID }}
+        vercel-project-id: ${{ secrets.PROJECT_ID }}
+        vercel-args: '--prod'
+        working-directory: ./
+        scope: ${{ secrets.TEAM_ID }}
+
+    - name: Post-deployment health check
+      run: |
+        sleep 30
+        curl -f https://bermuda-ground-station.com/ || exit 1
+        curl -f https://bermuda-ground-station.com/services || exit 1
+        curl -f https://bermuda-ground-station.com/contact || exit 1
+
+    - name: Update sitemap
+      run: |
+        curl -X POST "https://www.google.com/ping?sitemap=https://bermuda-ground-station.com/sitemap.xml"
+        curl -X POST "https://www.bing.com/ping?sitemap=https://bermuda-ground-station.com/sitemap.xml"

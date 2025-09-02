@@ -1,0 +1,35 @@
+Contact: security@bermuda-ground-station.com
+Contact: +1-441-555-0123
+Expires: 2025-12-31T23:59:59.000Z
+Encryption: https://bermuda-ground-station.com/pgp-key.asc
+Acknowledgments: https://bermuda-ground-station.com/security-acknowledgments
+Policy: https://bermuda-ground-station.com/security-policy
+Hiring: https://bermuda-ground-station.com/careers
+
+# Scope
+This security policy applies to:
+- Main website: bermuda-ground-station.com
+- Contact forms and API endpoints
+- Customer portal and documentation
+- Ground station monitoring systems (customer-facing only)
+
+# Out of Scope
+- Third-party services and integrations
+- Physical ground station equipment
+- Customer equipment and networks
+- Internal operational systems
+
+# Safe Harbor
+We support responsible disclosure and will not pursue legal action against security researchers who:
+- Make good faith efforts to avoid privacy violations and data destruction
+- Only interact with systems they have permission to test
+- Report vulnerabilities responsibly through proper channels
+- Do not access customer data or personally identifiable information
+
+# Response Time
+- Critical vulnerabilities: 24 hours
+- High severity: 72 hours  
+- Medium/Low severity: 1 week
+
+# Languages
+English, Portuguese

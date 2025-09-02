@@ -1,0 +1,53 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    Claude Code AI Assistant -- AI Development -- Built with Claude Code
+    Principal Engineer -- Full-stack Development & SEO
+    Technical Lead -- Ground Station Engineering
+
+# THANKS
+    Bermuda Regulatory Authority -- Spectrum coordination support
+    Local telecommunications providers -- Connectivity partnerships
+    Hurricane engineering consultants -- Structural analysis
+
+# TECHNOLOGY COLOPHON
+
+    ## Frontend
+    Next.js 14
+    TypeScript
+    React 18
+    TailwindCSS
+    Radix UI
+    Lucide React Icons
+
+    ## Backend & APIs
+    Next.js API Routes
+    Zod validation
+    hCaptcha security
+    Resend email service
+
+    ## SEO & Performance
+    Structured data (JSON-LD)
+    OpenGraph meta tags
+    Lighthouse CI optimization
+    Pa11y accessibility testing
+
+    ## Hosting & Analytics
+    Vercel deployment
+    Plausible Analytics
+    Vercel Analytics
+
+    ## Development Tools
+    Playwright testing
+    ESLint code quality
+    Prettier formatting
+    GitHub Actions CI/CD
+
+# LOCATION
+    Hamilton, Bermuda
+    Strategic North Atlantic position
+    32.3°N, 64.7°W
+
+# LAST UPDATE
+    2024-01-15

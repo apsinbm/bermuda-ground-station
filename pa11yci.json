@@ -1,0 +1,21 @@
+{
+  "defaults": {
+    "timeout": 30000,
+    "wait": 2000,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-dev-shm-usage"]
+    },
+    "standard": "WCAG2AA",
+    "includeNotices": false,
+    "includeWarnings": true,
+    "ignore": []
+  },
+  "urls": [
+    "http://localhost:3000/",
+    "http://localhost:3000/services",
+    "http://localhost:3000/locations",
+    "http://localhost:3000/contact",
+    "http://localhost:3000/faq",
+    "http://localhost:3000/ai-answers"
+  ]
+}
