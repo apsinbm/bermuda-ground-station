@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logo Option 1: Satellite Dish with Triangle</title>
+    <style>
+        body { 
+            background: #f8fafc; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            font-family: system-ui;
+        }
+        .logo-container { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+        }
+        .title { 
+            text-align: center; 
+            margin-bottom: 30px; 
+            color: #1f2937; 
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <h3 class="title">Option 1: Satellite Dish with Bermuda Triangle Signals</h3>
+        <svg width="200" height="200" viewBox="0 0 200 200">
+            <!-- Background circle -->
+            <circle cx="100" cy="100" r="90" fill="#f0f9ff" stroke="#e0f2fe" stroke-width="2"/>
+            
+            <!-- Satellite dish base/pedestal -->
+            <rect x="95" y="140" width="10" height="30" fill="#64748b"/>
+            <rect x="90" y="165" width="20" height="8" fill="#475569" rx="2"/>
+            
+            <!-- Satellite dish -->
+            <ellipse cx="100" cy="120" rx="35" ry="15" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+            <ellipse cx="100" cy="118" rx="30" ry="12" fill="#f1f5f9"/>
+            
+            <!-- Dish center feed -->
+            <circle cx="100" cy="120" r="3" fill="#475569"/>
+            <line x1="100" y1="115" x2="100" y2="105" stroke="#64748b" stroke-width="2"/>
+            
+            <!-- Triangle signal beams emanating from dish -->
+            <g opacity="0.8">
+                <!-- Left beam -->
+                <path d="M100 105 L60 40 L80 35 Z" fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="5,5">
+                    <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+                </path>
+                
+                <!-- Right beam -->
+                <path d="M100 105 L140 40 L120 35 Z" fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="5,5">
+                    <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+                </path>
+                
+                <!-- Center beam -->
+                <path d="M100 105 L100 25 L110 30 L90 30 Z" fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="5,5">
+                    <animate attributeName="stroke-dashoffset" values="0;10" dur="2s" repeatCount="indefinite"/>
+                </path>
+            </g>
+            
+            <!-- Triangle outline connecting beam endpoints -->
+            <path d="M70 37.5 L130 37.5 L100 27.5 Z" fill="none" stroke="#1d4ed8" stroke-width="2" opacity="0.6"/>
+            
+            <!-- Bermuda triangle marker at center -->
+            <circle cx="100" cy="35" r="4" fill="#dc2626"/>
+            <text x="100" y="42" text-anchor="middle" font-size="8" fill="#dc2626" font-weight="bold">BERMUDA</text>
+            
+            <!-- Signal waves -->
+            <g opacity="0.4">
+                <circle cx="100" cy="105" r="20" fill="none" stroke="#3b82f6" stroke-width="1">
+                    <animate attributeName="r" values="20;35;20" dur="3s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="100" cy="105" r="25" fill="none" stroke="#3b82f6" stroke-width="1">
+                    <animate attributeName="r" values="25;40;25" dur="3s" begin="1s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" begin="1s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+        </svg>
+    </div>
+</body>
+</html>

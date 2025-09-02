@@ -3,57 +3,52 @@ import {
   Rocket, 
   Camera,
   MapPin,
-  Clock
+  Clock,
+  Globe
 } from 'lucide-react';
 import { generateSEO } from '@/lib/seo';
 
 export const metadata = generateSEO({
-  title: 'Space Activity Sightings from Bermuda - Rocket Launches & Spacecraft',
-  description: 'Witness SpaceX launches and spacecraft passes from Bermuda. Our strategic North Atlantic position offers unique views of space missions.',
+  title: 'Space Operations from Bermuda - Mission Coverage & Launch Visibility',
+  description: 'Track SpaceX launches and spacecraft operations from Bermuda. Our strategic North Atlantic position provides exceptional mission coverage and operational awareness.',
 });
 
 const mediaItems = [
   {
     type: 'youtube',
     videoId: 'x9zIuyUkk6g',
-    title: 'SpaceX Launch from Bermuda',
-    date: 'Recent',
-    description: 'SpaceX rocket launch captured from Bermuda showing the spectacular ascent and trajectory'
+    title: 'SpaceX Crew-10 Dragon "Endurance" - Jellyfish Effect Over Bermuda',
+    date: 'March 14, 2025',
+    description: 'Incredible dual perspective: SpaceX live broadcast on laptop alongside real rocket creating spectacular "jellyfish effect" in Bermuda\'s night sky. Crew-10 mission with NASA astronauts Anne McClain, Nichole Ayers, JAXA\'s Takuya Onishi, and Roscosmos\' Kirill Peskov heading to the ISS. Visible just 8 minutes after launch from Kennedy Space Center.'
   },
   {
     type: 'youtube-shorts',
     videoId: '_umRXaSBypU',
-    title: 'Rocket Pass Over Bermuda',
-    date: 'Recent',
-    description: 'Quick view of rocket passing over Bermuda skies'
+    title: 'SpaceX Falcon 9 Bandwagon-1 Launch Over Bermuda',
+    date: 'April 7, 2024',
+    description: 'Historic first Bandwagon rideshare mission filmed from our neighbor\'s home in Bermuda. Just minutes after liftoff from Kennedy Space Center LC-39A, the Falcon 9 became visible cutting a bright path across our night sky with glowing exhaust trail. This groundbreaking mission deployed 11 spacecraft including South Korea\'s first military reconnaissance satellite and multiple commercial payloads to mid-inclination orbit - perfect for regional coverage between 60°N and 60°S. A rare Atlantic perspective of SpaceX\'s newest rideshare program launch.'
   },
   {
     type: 'twitter',
     tweetId: '1394099587347066882',
     username: 'PSingleton33',
-    title: 'NASA KiNet-X Barium Vapor Clouds',
+    title: 'NASA KiNet-X Black Brant XII - Barium Vapor Experiment',
     date: 'May 16, 2021',
-    description: 'Historic NASA Black Brant XII rocket experiment filmed from Bermuda. The mission released barium vapor creating green-violet plasma clouds visible across the Atlantic, demonstrating energy transport in space plasma physics.'
+    description: 'Historic NASA Black Brant XII sounding rocket experiment filmed from my house in Bermuda. The KiNETic-scale energy and momentum transport eXperiment (KiNet-X) released barium vapor creating distinctive green-violet plasma clouds 217-249 miles high over the Atlantic. This space plasma physics research studied energy transport between magnetically connected space regions, with clouds visible from Nova Scotia to Florida.'
   },
   {
     type: 'photo',
     src: '/images/sightings/rocket-trail-photo.jpg',
-    title: 'Rocket Trail at Dawn',
-    date: 'February 2024',
-    description: 'Early morning launch creating spectacular contrail visible from Hamilton'
-  },
-  {
-    type: 'photo',
-    src: '/images/sightings/multiple-satellites.jpg',
-    title: 'Starlink Constellation',
-    date: 'December 2023',
-    description: 'Multiple Starlink satellites visible in formation over the Atlantic'
+    title: 'SpaceX Rocket Jellyfish Effect Over Bermuda',
+    date: '2022',
+    description: 'Spectacular jellyfish phenomenon created by SpaceX rocket exhaust illuminated by sunlight, visible over Bermuda\'s night skyline'
   }
 ];
 
 export default function SightingsPage() {
   return (
     <>
+      <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
       <div className="bg-gradient-to-b from-muted/50 to-background">
         <div className="mx-auto max-w-4xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
           <div className="text-center">
@@ -63,56 +58,20 @@ export default function SightingsPage() {
               </div>
             </div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Space Activity from Bermuda
+              Space Operations from Bermuda
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
-              Bermuda's strategic North Atlantic position provides exceptional views of 
+              Bermuda's strategic North Atlantic position provides exceptional operational coverage of 
               rocket launches, spacecraft passes, and satellite deployments. Our facilities 
-              regularly witness the space missions we help support.
+              actively monitor the space missions we help support.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="space-y-16">
           
-          {/* Why Bermuda Sees So Much */}
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold tracking-tight mb-8">
-              Prime Viewing Location
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <MapPin className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold mb-2">ISS Flight Path</h3>
-                <p className="text-sm text-muted-foreground text-center">
-                  International Space Station passes directly over Bermuda multiple times per month
-                </p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <Rocket className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold mb-2">Launch Trajectories</h3>
-                <p className="text-sm text-muted-foreground text-center">
-                  Cape Canaveral launches often pass near Bermuda en route to polar and ISS orbits
-                </p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <Camera className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="font-semibold mb-2">Clear Atlantic Skies</h3>
-                <p className="text-sm text-muted-foreground text-center">
-                  Minimal light pollution and clear horizons provide excellent visibility
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* Media Gallery */}
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-center mb-12">
@@ -121,9 +80,9 @@ export default function SightingsPage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {mediaItems.map((item, index) => (
-                <Card key={index} className="overflow-hidden">
-                  <div className="aspect-video bg-muted">
-                    {item.type === 'youtube' || item.type === 'youtube-shorts' ? (
+                <Card key={index} className="overflow-hidden h-full flex flex-col">
+                  {item.type === 'youtube' || item.type === 'youtube-shorts' ? (
+                    <div className="aspect-video bg-muted">
                       <iframe
                         src={`https://www.youtube.com/embed/${item.videoId}?rel=0&modestbranding=1&showinfo=0`}
                         title={item.title}
@@ -133,33 +92,27 @@ export default function SightingsPage() {
                         allowFullScreen
                         referrerPolicy="strict-origin-when-cross-origin"
                       />
-                    ) : item.type === 'twitter' ? (
-                      <div className="w-full h-full flex items-center justify-center bg-slate-100 rounded-lg">
-                        <div className="text-center p-8">
-                          <div className="mb-4">
-                            <svg className="w-8 h-8 mx-auto text-slate-600" fill="currentColor" viewBox="0 0 24 24">
-                              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                            </svg>
-                          </div>
-                          <p className="text-sm text-slate-600 mb-2">View on Twitter</p>
-                          <a 
-                            href={`https://twitter.com/${item.username}/status/${item.tweetId}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-500 hover:text-blue-600 text-sm font-medium"
-                          >
-                            @{item.username}
-                          </a>
-                        </div>
-                      </div>
-                    ) : (
+                    </div>
+                  ) : item.type === 'twitter' ? (
+                    <div className="aspect-video bg-muted rounded-lg p-4">
+                      <blockquote 
+                        className="twitter-tweet" 
+                        data-theme="light"
+                        data-width="100%"
+                        data-height="400"
+                      >
+                        <a href={`https://twitter.com/${item.username}/status/${item.tweetId}`}></a>
+                      </blockquote>
+                    </div>
+                  ) : (
+                    <div className="aspect-video bg-muted rounded-lg p-4">
                       <img
                         src={item.src}
                         alt={item.title}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer rounded-lg"
                       />
-                    )}
-                  </div>
+                    </div>
+                  )}
                   <CardContent className="p-6">
                     <div className="flex items-center gap-2 mb-2">
                       <Clock className="h-4 w-4 text-muted-foreground" />
@@ -171,6 +124,96 @@ export default function SightingsPage() {
                 </Card>
               ))}
             </div>
+          </div>
+
+          {/* NASA KiNet-X Experiment Details */}
+          <div>
+            <Card className="overflow-hidden">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold tracking-tight mb-6">
+                  Historic NASA KiNet-X Barium Vapor Experiment
+                </h3>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <p className="text-muted-foreground mb-6">
+                      On May 16, 2021, NASA's Black Brant XII sounding rocket carried the KiNETic-scale 
+                      energy and momentum transport eXperiment (KiNet-X) from Wallops Flight Facility. 
+                      This groundbreaking space plasma physics research studied how energy and momentum 
+                      transport between magnetically connected space regions.
+                    </p>
+                    
+                    <div className="space-y-4">
+                      <div className="flex items-start">
+                        <Rocket className="mr-3 mt-1 h-4 w-4 text-primary flex-shrink-0" />
+                        <div>
+                          <div className="font-medium">Mission Details</div>
+                          <div className="text-sm text-muted-foreground">Four-stage Black Brant XII launched 8:44 PM EDT</div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start">
+                        <Camera className="mr-3 mt-1 h-4 w-4 text-primary flex-shrink-0" />
+                        <div>
+                          <div className="font-medium">Barium Vapor Clouds</div>
+                          <div className="text-sm text-muted-foreground">Green-violet plasma clouds at 217-249 miles altitude</div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start">
+                        <Globe className="mr-3 mt-1 h-4 w-4 text-primary flex-shrink-0" />
+                        <div>
+                          <div className="font-medium">Visibility Range</div>
+                          <div className="text-sm text-muted-foreground">Halifax to Cape Canaveral, inland to Ohio</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-muted/50 p-6 rounded-lg">
+                    <h4 className="font-semibold mb-4">Scientific Collaboration</h4>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Led by University of Alaska Fairbanks' Peter Delamere, with ground observations 
+                      conducted from Bermuda by Don Hampton. The experiment included researchers from:
+                    </p>
+                    <div className="grid grid-cols-2 gap-2 text-xs text-muted-foreground">
+                      <div>• UAF Geophysical Institute</div>
+                      <div>• Dartmouth University</div>
+                      <div>• University of New Hampshire</div>
+                      <div>• Clemson University</div>
+                      <div>• University of Maryland</div>
+                      <div>• NASA Goddard Space Flight Center</div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Bermuda Rocket Tracker */}
+          <div className="text-center">
+            <Card className="max-w-3xl mx-auto">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-semibold mb-4">
+                  Track Future Launches from Bermuda
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  Want to catch future rocket launches visible from Bermuda? Our strategic North Atlantic 
+                  position offers unique viewing opportunities for launches from Cape Canaveral and Wallops. 
+                  Many SpaceX and NASA missions become visible over Bermuda within minutes of launch.
+                </p>
+                <div className="flex justify-center">
+                  <a 
+                    href="https://bermuda-rocket-tracker.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                  >
+                    <Rocket className="h-5 w-5 mr-2" />
+                    Launch Bermuda Rocket Tracker App
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Connection to Services */}

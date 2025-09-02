@@ -1,13 +1,13 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://bermuda-ground-station.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://atlanticground.com';
 
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Bermuda Ground Station Hosting',
-  alternateName: 'BGS Hosting',
+  name: 'Atlantic Ground Station Hosting',
+  alternateName: ['AGS Hosting', 'Atlantic Teleport Services'],
   url: siteUrl,
   logo: `${siteUrl}/logo.svg`,
-  description: 'Strategic ground station hosting in Bermuda\'s North Atlantic location for satellite communications',
+  description: 'Professional teleport and earth station hosting from Bermuda\'s strategic North Atlantic location for satellite communications',
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'BM',
@@ -15,12 +15,14 @@ export const organizationSchema = {
   },
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+1-441-555-0123',
-    contactType: 'sales',
-    availableLanguage: 'English',
+    telephone: '+1-441-705-1547',
+    contactType: 'Technical Support',
+    areaServed: ['North Atlantic', 'Caribbean', 'Americas', 'Europe'],
+    availableLanguage: ['English'],
+    contactOption: ['24/7 Support'],
   },
   sameAs: [
-    'https://linkedin.com/company/bermuda-ground-station',
+    'https://linkedin.com/company/atlantic-ground-station',
   ],
 };
 
@@ -28,10 +30,10 @@ export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   '@id': `${siteUrl}#organization`,
-  name: 'Bermuda Ground Station Hosting',
+  name: 'Atlantic Ground Station Hosting',
   image: `${siteUrl}/og-image.jpg`,
   url: siteUrl,
-  telephone: '+1-441-555-0123',
+  telephone: '+1-441-705-1547',
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'BM',
@@ -41,6 +43,8 @@ export const localBusinessSchema = {
     '@type': 'GeoCoordinates',
     latitude: 32.3078,
     longitude: -64.7505,
+    name: 'Bermuda - Strategic North Atlantic Position',
+    description: '700+ miles from US mainland, minimal RF interference',
   },
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
@@ -61,8 +65,8 @@ export const websiteSchema = {
   '@type': 'WebSite',
   '@id': `${siteUrl}#website`,
   url: siteUrl,
-  name: 'Bermuda Ground Station Hosting',
-  description: 'Ground station hosting services in Bermuda',
+  name: 'Atlantic Ground Station Hosting',
+  description: 'Atlantic ground station hosting services from Bermuda',
   publisher: {
     '@id': `${siteUrl}#organization`,
   },
@@ -77,7 +81,7 @@ export const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: 'Ground Station Hosting',
-  description: 'Professional satellite antenna hosting services across Bermuda',
+  description: 'Professional satellite antenna hosting services from Bermuda across the Atlantic',
   provider: {
     '@id': `${siteUrl}#organization`,
   },
@@ -85,8 +89,38 @@ export const serviceSchema = {
     '@type': 'Place',
     name: 'Bermuda',
   },
-  serviceType: 'Telecommunications Infrastructure',
-  category: 'Satellite Communications',
+  serviceType: 'Satellite Ground Station Hosting',
+  category: 'Telecommunications Infrastructure',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Ground Station Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Antenna Hosting',
+          description: 'Professional hosting of receive and transmit antennas',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: '24/7 NOC Support',
+          description: 'Round-the-clock monitoring and remote hands',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Licensing Support',
+          description: 'Regulatory compliance and transmit licensing assistance',
+        },
+      },
+    ],
+  },
 };
 
 

@@ -35,25 +35,51 @@ export default async function Image() {
         >
           <div
             style={{
-              width: 80,
-              height: 80,
-              backgroundColor: '#3b82f6',
-              borderRadius: 16,
+              width: 120,
+              height: 120,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              marginRight: 24,
+              marginRight: 32,
+              position: 'relative',
             }}
           >
+            {/* Ocean waves triangle base */}
             <svg
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="white"
-              strokeWidth="2"
+              width="120"
+              height="120"
+              viewBox="0 0 120 120"
+              style={{ position: 'absolute' }}
             >
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              {/* Triangle with ocean waves */}
+              <path
+                d="M60 25 L25 85 L95 85 Z"
+                fill="url(#oceanGrad)"
+                stroke="#0ea5e9"
+                strokeWidth="2"
+              />
+              
+              {/* Satellite */}
+              <g transform="translate(60, 35)">
+                <rect x="-6" y="-4" width="12" height="8" fill="#1e40af" rx="1" />
+                <rect x="-10" y="-2" width="4" height="4" fill="#3b82f6" />
+                <rect x="6" y="-2" width="4" height="4" fill="#3b82f6" />
+              </g>
+              
+              {/* Signal beams */}
+              <path d="M60 35 L60 70" stroke="#3b82f6" strokeWidth="2" opacity="0.8" />
+              <path d="M60 35 L40 65" stroke="#3b82f6" strokeWidth="2" opacity="0.6" />
+              <path d="M60 35 L80 65" stroke="#3b82f6" strokeWidth="2" opacity="0.6" />
+              
+              {/* Bermuda marker */}
+              <circle cx="60" cy="70" r="3" fill="#dc2626" />
+              
+              <defs>
+                <linearGradient id="oceanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.3" />
+                  <stop offset="100%" stopColor="#0891b2" stopOpacity="0.1" />
+                </linearGradient>
+              </defs>
             </svg>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>

@@ -7,7 +7,7 @@ test.describe('Accessibility', () => {
     // Check for proper h1
     const h1Elements = page.locator('h1');
     await expect(h1Elements).toHaveCount(1);
-    await expect(h1Elements.first()).toContainText(/Bermuda Ground Station/);
+    await expect(h1Elements.first()).toContainText(/Atlantic Ground Station/);
     
     // Check for h2 elements
     const h2Elements = page.locator('h2');
@@ -67,7 +67,7 @@ test.describe('Accessibility', () => {
     
     // This is a basic test - in production you'd use automated tools
     // Check that text is visible and readable
-    await expect(page.getByRole('heading', { name: /Bermuda Ground Station/ })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Atlantic Ground Station/ })).toBeVisible();
     await expect(page.getByText(/Strategic satellite antenna hosting/)).toBeVisible();
   });
 
@@ -130,7 +130,7 @@ test.describe('Accessibility', () => {
     await page.goto('/');
     
     // Page should still be functional with reduced motion
-    await expect(page.getByRole('heading', { name: /Bermuda Ground Station/ })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Atlantic Ground Station/ })).toBeVisible();
     
     // Test navigation still works
     await page.getByRole('link', { name: 'Services' }).click();

@@ -22,8 +22,8 @@ import Link from 'next/link';
 import { generateSEO } from '@/lib/seo';
 
 export const metadata = generateSEO({
-  title: 'Ground Station Services - Satellite Hosting in Bermuda',
-  description: 'Professional hosting of receive and transmit antennas in Bermuda. Power and connectivity via local telecom partners with licensing support.',
+  title: 'Teleport & Earth Station Services - Ground Station Hosting Bermuda',
+  description: 'Professional teleport and earth station services in Bermuda. Antenna hosting, NOC support, and licensing assistance with carrier-grade infrastructure.',
 });
 
 
@@ -44,7 +44,7 @@ export default function ServicesPage() {
         {/* Content */}
         <div className="relative z-10 mx-auto max-w-4xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
           <div className="text-center text-white">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
+            <h1 className="text-5xl font-black tracking-tight sm:text-7xl mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               Connecting Bermuda to Space
             </h1>
             <p className="mt-6 text-xl leading-8 text-white/90 max-w-3xl mx-auto">
@@ -56,7 +56,7 @@ export default function ServicesPage() {
             <div className="mt-8">
               <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm">
                 <Antenna className="h-4 w-4 mr-2" />
-                Professional Ground Station Hosting
+                Professional Teleport & Earth Station Services
               </div>
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function ServicesPage() {
         <div className="space-y-16">
           
           {/* Antenna Hosting */}
-          <div>
+          <div id="antenna-hosting">
             <Card className="overflow-hidden">
               <div className="lg:grid lg:grid-cols-2">
                 <div className="p-8 lg:p-12">
@@ -75,17 +75,29 @@ export default function ServicesPage() {
                     <Antenna className="h-6 w-6 text-primary" />
                   </div>
                   <h2 className="text-3xl font-bold tracking-tight mb-4">
-                    Antenna Hosting
+                    Earth Station & Antenna Hosting
                   </h2>
-                  <p className="text-lg text-muted-foreground mb-8">
+                  <p className="text-lg text-muted-foreground mb-6">
                     Professional hosting for both receive and transmit satellite antennas 
                     across our Bermuda facilities.
+                  </p>
+                  <p className="text-sm text-muted-foreground mb-8 p-3 bg-muted/50 rounded-lg">
+                    Transmit operations may require approvals; we can assist with applications and 
+                    spectrum planning via the{" "}
+                    <a 
+                      href="https://www.ra.bm/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary hover:text-primary/80 underline"
+                    >
+                      Regulatory Authority of Bermuda
+                    </a>.
                   </p>
                   
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <CheckCircle className="mr-3 mt-0.5 h-4 w-4 text-primary flex-shrink-0" />
-                      <span className="text-muted-foreground">Dedicated satellite farms for larger installations</span>
+                      <span className="text-muted-foreground">Dedicated teleports for larger installations</span>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="mr-3 mt-0.5 h-4 w-4 text-primary flex-shrink-0" />
@@ -106,7 +118,7 @@ export default function ServicesPage() {
                       <Building2 className="mr-3 h-5 w-5 text-primary" />
                       <div>
                         <div className="font-medium">Multiple Locations</div>
-                        <div className="text-sm text-muted-foreground">Farms and rooftop sites across Bermuda</div>
+                        <div className="text-sm text-muted-foreground">Teleports and rooftop sites across Bermuda</div>
                       </div>
                     </div>
                     
@@ -124,7 +136,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Our Capabilities */}
-          <div>
+          <div id="capabilities">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tight mb-4">
                 Our Capabilities

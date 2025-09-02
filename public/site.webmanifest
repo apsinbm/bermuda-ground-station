@@ -1,7 +1,7 @@
 {
-  "name": "Bermuda Ground Station Hosting",
-  "short_name": "BGS Hosting",
-  "description": "Strategic satellite antenna hosting in Bermuda's North Atlantic location",
+  "name": "Atlantic Ground Station Hosting",
+  "short_name": "AGS Hosting",
+  "description": "Strategic satellite antenna hosting from Bermuda's North Atlantic location",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://bermuda-ground-station.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://atlanticground.com';
   
   const routes = [
     {
@@ -27,6 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'yearly' as const,
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/sightings`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/contact`,

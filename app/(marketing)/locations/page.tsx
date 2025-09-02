@@ -15,8 +15,8 @@ import { generateSEO } from '@/lib/seo';
 import { localBusinessSchema } from '@/lib/schema';
 
 export const metadata = generateSEO({
-  title: 'Ground Station Hosting Locations in Bermuda',
-  description: 'Dedicated satellite farms and rooftop hosting sites in Bermuda. Professional ground station hosting with strong power, connectivity, and security.',
+  title: 'Ground Station & Teleport Facilities in Bermuda',
+  description: 'Dedicated ground station facilities and rooftop hosting sites in Bermuda. Professional teleport services with carrier-grade infrastructure and 24/7 support.',
 });
 
 
@@ -50,7 +50,7 @@ export default function LocationsPage() {
             </h1>
             <p className="mt-6 text-xl leading-8 text-white/90 max-w-3xl mx-auto">
               Our hosting locations provide the critical ground infrastructure for satellite 
-              and space missions. From dedicated farms for large installations to flexible 
+              and space missions. From dedicated teleports for large installations to flexible 
               rooftop sites across Bermuda.
             </p>
             <div className="mt-8">
@@ -66,26 +66,26 @@ export default function LocationsPage() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="space-y-16">
           
-          {/* Dedicated Satellite Farms */}
-          <div>
-            <Card className="overflow-hidden">
+          {/* Dedicated Ground Station Facilities */}
+          <div id="ground-station-facilities">
+            <Card className="overflow-hidden group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
               <div className="lg:grid lg:grid-cols-2">
                 <div className="p-8 lg:p-12">
                   <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                     <Antenna className="h-6 w-6 text-primary" />
                   </div>
                   <h2 className="text-3xl font-bold tracking-tight mb-4">
-                    Dedicated Satellite Farms
+                    Dedicated Ground Station Facilities
                   </h2>
                   <p className="text-lg text-muted-foreground mb-8">
-                    Purpose-built ground facilities designed for larger antennas with optimal 
-                    spacing, security, and minimal RF interference.
+                    Purpose-built teleport facilities designed for multiple antennas with optimal 
+                    spacing, security, and minimal RF interference. Professional earth station operations.
                   </p>
                   
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <CheckCircle className="mr-3 mt-0.5 h-4 w-4 text-primary flex-shrink-0" />
-                      <span className="text-muted-foreground">Support for large antenna installations</span>
+                      <span className="text-muted-foreground">Multi-antenna teleport capabilities</span>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="mr-3 mt-0.5 h-4 w-4 text-primary flex-shrink-0" />
@@ -105,14 +105,14 @@ export default function LocationsPage() {
                 <div className="relative">
                   <img 
                     src="/images/bermuda-satellite-farm-2.jpg" 
-                    alt="Professional satellite farm in Bermuda featuring multiple satellite dishes of various sizes with optimal spacing on well-maintained tropical grounds"
+                    alt="Professional ground station facility in Bermuda featuring multiple earth station antennas with optimal spacing for teleport operations"
                     className="w-full h-full object-cover rounded-lg"
                     style={{ minHeight: '400px' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
                   <div className="absolute bottom-4 left-4 right-4">
                     <p className="text-white text-sm font-medium">
-                      Professional satellite farm in Bermuda featuring multiple antenna sizes with optimal spacing
+                      Professional ground station facility with multiple earth station antennas and teleport capabilities
                     </p>
                   </div>
                 </div>
@@ -121,8 +121,8 @@ export default function LocationsPage() {
           </div>
 
           {/* Rooftop Hosting */}
-          <div>
-            <Card className="overflow-hidden">
+          <div id="rooftop-hosting">
+            <Card className="overflow-hidden group hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
               <div className="lg:grid lg:grid-cols-2">
                 <div className="p-8 lg:p-12">
                   <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">

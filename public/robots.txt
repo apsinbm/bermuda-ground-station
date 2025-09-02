@@ -5,14 +5,11 @@ Allow: /
 Allow: /services
 Allow: /locations
 Allow: /contact
-Allow: /faq
-Allow: /ai-answers
-Allow: /case-studies
-Allow: /regulatory-support
-Allow: /connectivity
+Allow: /about
+Allow: /sightings
 
 # Sitemap location
-Sitemap: https://bermuda-ground-station.com/sitemap.xml
+Sitemap: https://atlanticground.com/sitemap.xml
 
 # Crawl delay for respectful indexing
 Crawl-delay: 1

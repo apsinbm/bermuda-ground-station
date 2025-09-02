@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://bermuda-ground-station.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://atlanticground.com';
 
 interface SEOProps {
   title?: string;
@@ -12,16 +12,17 @@ interface SEOProps {
 
 export function generateSEO({
   title,
-  description = 'Strategic ground station hosting in Bermuda\'s North Atlantic location. Host satellite antennas on rooftops, dedicated farms, and secure datacenters with regulatory support and transatlantic connectivity.',
+  description = 'Your 24/7 Atlantic teleport partner. Professional ground station and earth station hosting from Bermuda with 30+ years experience. Hurricane-rated facilities, 700+ miles offshore, minimal RF interference.',
   image = `${siteUrl}/og-image.jpg`,
   noIndex = false,
   canonical,
 }: SEOProps = {}): Metadata {
   const fullTitle = title 
-    ? `${title} | Bermuda Ground Station Hosting`
-    : 'Bermuda Ground Station Hosting - North Atlantic Satellite Antenna Solutions';
+    ? `${title} | Atlantic Ground Station Hosting`
+    : 'Atlantic Ground Station Hosting | North Atlantic Satellite Gateway | 24/7 Support';
 
   return {
+    metadataBase: new URL(siteUrl),
     title: fullTitle,
     description,
     alternates: {
@@ -33,13 +34,13 @@ export function generateSEO({
       url: canonical || siteUrl,
       title: fullTitle,
       description,
-      siteName: 'Bermuda Ground Station Hosting',
+      siteName: 'Atlantic Ground Station Hosting',
       images: [
         {
           url: image,
           width: 1200,
           height: 630,
-          alt: title || 'Bermuda Ground Station Hosting',
+          alt: title || 'Atlantic Ground Station Hosting',
         },
       ],
     },

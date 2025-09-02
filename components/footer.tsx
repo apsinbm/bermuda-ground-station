@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Satellite, Mail, Phone, MapPin } from 'lucide-react';
 
 const footerNavigation = {
@@ -20,16 +21,21 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <Link href="/" className="flex items-center space-x-2">
-              <Satellite className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold">
-                Bermuda Ground Station
-              </span>
+            <Link href="/" className="flex items-center space-x-3">
+              <Satellite className="h-10 w-10 text-primary" />
+              <div className="flex flex-col">
+                <span className="text-lg font-bold leading-tight">
+                  Atlantic Ground Station
+                </span>
+                <span className="text-xs text-muted-foreground font-medium">
+                  Teleport Services
+                </span>
+              </div>
             </Link>
             <p className="text-sm text-muted-foreground max-w-md">
-              Strategic satellite antenna hosting in Bermuda&apos;s North Atlantic location. 
+              Strategic teleport and earth station hosting from Bermuda&apos;s North Atlantic location. 
               Professional ground station services with regulatory support and 
-              transatlantic connectivity.
+              carrier-grade transatlantic connectivity.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
@@ -38,11 +44,11 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4" />
-                <span>+1 (441) 555-0123</span>
+                <span>+1 (441) 705-1547</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4" />
-                <span>info@bermuda-ground-station.com</span>
+                <span>info@atlanticground.com</span>
               </div>
             </div>
           </div>
@@ -86,7 +92,7 @@ export function Footer() {
         <div className="mt-12 border-t pt-8">
           <div className="flex items-center justify-between">
             <p className="text-xs text-muted-foreground">
-              &copy; {new Date().getFullYear()} Bermuda Ground Station Hosting. All rights reserved.
+              &copy; {new Date().getFullYear()} Atlantic Ground Station Hosting. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground">
               Proudly serving from Bermuda&apos;s strategic North Atlantic location

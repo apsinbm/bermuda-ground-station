@@ -15,12 +15,12 @@ export const metadata = generateSEO({
 const contactMethods = [
   {
     name: 'Phone',
-    contact: '+1 (441) 555-0123',
+    contact: '+1 (441) 705-1547',
     icon: Phone,
   },
   {
     name: 'Email',
-    contact: 'info@bermuda-ground-station.com',
+    contact: 'info@atlanticground.com',
     icon: Mail,
   },
   {

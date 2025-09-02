@@ -1,4 +1,4 @@
-# Bermuda Ground Station Hosting
+# Atlantic Ground Station Hosting
 
 A professional marketing website for satellite ground station hosting services in Bermuda's strategic North Atlantic location.
 
@@ -67,7 +67,10 @@ npm start
 - `npm run build` - Production build
 - `npm run start` - Production server
 - `npm run lint` - ESLint
-- `npm run type-check` - TypeScript checking
+- `npm run typecheck` - TypeScript validation
+- `npm run test` - Playwright end-to-end tests
+- `npm run a11y` - Accessibility testing with Pa11y
+- `npm run lighthouse` - Lighthouse performance audit
 
 ## 📁 Project Structure
 
@@ -104,13 +107,14 @@ npm start
 - **bermuda-satellite-farm-2.jpg**: Actual satellite farm (Locations)
 - **bermuda-rooftop-installation.jpg**: Professional rooftop setup (Locations)
 
-### Videos
-- **YouTube Embeds**: SpaceX launches and rocket passes
+### Videos & Media
+- **YouTube Embeds**: SpaceX Crew-10 Dragon launch, Falcon 9 Starlink missions
 - **Twitter Integration**: NASA KiNet-X barium vapor experiment
+- **Space Photography**: Real rocket trails and satellite passes from Bermuda
 
 ## 🔒 Security Features
 
-- **Content Security Policy**: Strict CSP with YouTube iframe allowlist
+- **Content Security Policy**: Comprehensive CSP with YouTube, Twitter, and hCaptcha allowlists
 - **Security Headers**: HSTS, X-Frame-Options, etc.
 - **Form Protection**: hCaptcha integration
 - **Input Validation**: Zod schema validation
@@ -146,14 +150,12 @@ npm start
 - Touch-friendly navigation
 - Optimized for all screen sizes
 
-## 🔍 SEO Optimization
+## 🔍 SEO & Accessibility
 
-- Structured data (JSON-LD)
-- Open Graph meta tags
-- Twitter Card support
-- Semantic HTML
-- Fast loading times
-- Accessibility compliance
+- **SEO**: Structured data (JSON-LD), Open Graph meta tags, Twitter Card support
+- **Accessibility**: WCAG-compliant ARIA labels, semantic HTML, keyboard navigation
+- **Performance**: Fast loading times, optimized images, efficient routing
+- **Sitemap**: Dynamic sitemap including all pages (Home, Services, Locations, Sightings, etc.)
 
 ## 📦 Deployment
 
@@ -170,8 +172,8 @@ Proprietary - All rights reserved
 ## 🤝 Contact
 
 For questions about hosting services or technical support:
-- **Email**: info@bermuda-ground-station.com
-- **Phone**: +1 (441) 555-0123
+- **Email**: info@atlanticground.com
+- **Phone**: +1 (441) 705-1547
 - **Location**: Hamilton, Bermuda
 
 ---

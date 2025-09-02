@@ -11,8 +11,8 @@ import Link from 'next/link';
 import { generateSEO } from '@/lib/seo';
 
 export const metadata = generateSEO({
-  title: 'About - Ground Station Hosting in Bermuda',
-  description: '30+ years IT and telecommunications experience. Professional ground station hosting services in Bermuda with established infrastructure and regulatory expertise.',
+  title: 'About - Teleport & Earth Station Services in Bermuda',
+  description: '30+ years teleport and telecommunications experience. Professional ground station and earth station hosting services in Bermuda with carrier-grade infrastructure.',
 });
 
 
@@ -23,12 +23,12 @@ export default function AboutPage() {
       <div className="bg-gradient-to-b from-muted/50 to-background">
         <div className="mx-auto max-w-4xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+            <h1 className="text-5xl font-black tracking-tight sm:text-6xl bg-gradient-to-r from-gray-900 to-primary bg-clip-text text-transparent">
               About
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
-              We bring over 30 years of experience in IT and telecommunications to 
-              provide professional ground station hosting services across Bermuda.
+              We bring over 30 years of experience in teleport operations and telecommunications to 
+              provide professional ground station and earth station hosting services across Bermuda.
             </p>
           </div>
         </div>

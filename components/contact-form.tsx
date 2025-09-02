@@ -8,7 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { contactFormSchema, ContactFormData } from '@/lib/validators';
-import { CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { CheckCircle, AlertCircle, Loader2, Shield, ChevronDown } from 'lucide-react';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 interface ContactFormProps {
@@ -20,6 +20,7 @@ export function ContactForm({ className }: ContactFormProps) {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const [hCaptchaToken, setHCaptchaToken] = useState<string | null>(null);
+  const [showTechnicalDetails, setShowTechnicalDetails] = useState(false);
 
   const {
     register,
@@ -95,6 +96,17 @@ export function ContactForm({ className }: ContactFormProps) {
         </CardDescription>
       </CardHeader>
       <CardContent>
+        <div className="mb-6 p-4 bg-muted/50 rounded-lg border border-muted">
+          <div className="flex items-start gap-3">
+            <Shield className="h-5 w-5 text-primary mt-0.5" />
+            <div className="space-y-1">
+              <p className="text-sm font-medium">Your Information is Secure</p>
+              <p className="text-sm text-muted-foreground">
+                All data is encrypted and transmitted securely. We never share your information with third parties.
+              </p>
+            </div>
+          </div>
+        </div>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
@@ -162,9 +174,11 @@ export function ContactForm({ className }: ContactFormProps) {
                 id="company"
                 {...register('company')}
                 className={errors.company ? 'border-red-500' : ''}
+                aria-invalid={errors.company ? 'true' : 'false'}
+                aria-describedby={errors.company ? 'company-error' : undefined}
               />
               {errors.company && (
-                <p className="mt-1 text-sm text-red-600">{errors.company.message}</p>
+                <p id="company-error" role="alert" className="mt-1 text-sm text-red-600">{errors.company.message}</p>
               )}
             </div>
             
@@ -176,11 +190,13 @@ export function ContactForm({ className }: ContactFormProps) {
                 id="phoneNumber"
                 type="tel"
                 {...register('phoneNumber')}
-                placeholder="+1-441-555-0123"
+                placeholder="+1-441-705-1547"
                 className={errors.phoneNumber ? 'border-red-500' : ''}
+                aria-invalid={errors.phoneNumber ? 'true' : 'false'}
+                aria-describedby={errors.phoneNumber ? 'phoneNumber-error' : undefined}
               />
               {errors.phoneNumber && (
-                <p className="mt-1 text-sm text-red-600">{errors.phoneNumber.message}</p>
+                <p id="phoneNumber-error" role="alert" className="mt-1 text-sm text-red-600">{errors.phoneNumber.message}</p>
               )}
             </div>
           </div>
@@ -195,6 +211,8 @@ export function ContactForm({ className }: ContactFormProps) {
               className={`w-full rounded-md border px-3 py-2 text-sm ${
                 errors.useCase ? 'border-red-500' : 'border-input'
               }`}
+              aria-invalid={errors.useCase ? 'true' : 'false'}
+              aria-describedby={errors.useCase ? 'useCase-error' : undefined}
             >
               <option value="">Select your use case</option>
               <option value="leo-constellation">LEO Constellation Ground Station</option>
@@ -205,14 +223,33 @@ export function ContactForm({ className }: ContactFormProps) {
               <option value="other">Other</option>
             </select>
             {errors.useCase && (
-              <p className="mt-1 text-sm text-red-600">{errors.useCase.message}</p>
+              <p id="useCase-error" role="alert" className="mt-1 text-sm text-red-600">{errors.useCase.message}</p>
             )}
           </div>
 
-          <div>
-            <label className="block text-sm font-medium mb-2">
-              Frequency Bands * (Select all that apply)
-            </label>
+          {/* Technical Details Toggle */}
+          <div className="border-t pt-6">
+            <button
+              type="button"
+              onClick={() => setShowTechnicalDetails(!showTechnicalDetails)}
+              className="flex items-center justify-between w-full text-left text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <span>Technical Details (Optional)</span>
+              <ChevronDown 
+                className={`h-4 w-4 transition-transform ${showTechnicalDetails ? 'rotate-180' : ''}`} 
+              />
+            </button>
+            <p className="text-xs text-muted-foreground mt-1">
+              Provide specific technical requirements for more accurate assistance
+            </p>
+          </div>
+
+          {showTechnicalDetails && (
+            <div className="space-y-6 border border-muted rounded-lg p-4 bg-muted/20">
+              <div>
+                <label className="block text-sm font-medium mb-2">
+                  Frequency Bands (Select all that apply)
+                </label>
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
               {[
                 { value: 'uhf', label: 'UHF' },
@@ -242,7 +279,7 @@ export function ContactForm({ className }: ContactFormProps) {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             <div>
               <label htmlFor="dishSize" className="block text-sm font-medium mb-2">
-                Antenna Size *
+                Antenna Size
               </label>
               <select
                 id="dishSize"
@@ -285,7 +322,7 @@ export function ContactForm({ className }: ContactFormProps) {
             
             <div>
               <label htmlFor="powerRequirement" className="block text-sm font-medium mb-2">
-                Power Required *
+                Power Required
               </label>
               <select
                 id="powerRequirement"
@@ -305,6 +342,8 @@ export function ContactForm({ className }: ContactFormProps) {
               )}
             </div>
           </div>
+            </div>
+          )}
 
           <div>
             <label className="block text-sm font-medium mb-2">
@@ -343,9 +382,11 @@ export function ContactForm({ className }: ContactFormProps) {
               rows={4}
               placeholder="Please describe your specific technical requirements, operational constraints, or any other details that would help us prepare an accurate proposal..."
               className={errors.message ? 'border-red-500' : ''}
+              aria-invalid={errors.message ? 'true' : 'false'}
+              aria-describedby={errors.message ? 'message-error' : undefined}
             />
             {errors.message && (
-              <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
+              <p id="message-error" role="alert" className="mt-1 text-sm text-red-600">{errors.message.message}</p>
             )}
           </div>
 

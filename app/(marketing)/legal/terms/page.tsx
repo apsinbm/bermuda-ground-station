@@ -40,9 +40,8 @@ export default function TermsPage() {
             </CardHeader>
             <CardContent>
               <p>
-                These Terms of Service (&quot;Terms&quot;) govern your use of our website and services 
-                provided by Bermuda Ground Station Hosting (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). 
-                By accessing our website or using our services, you agree to be bound by these Terms.
+                These terms cover website use and general business practices. Specific service agreements 
+                are handled separately with appropriate terms tailored to your project requirements.
               </p>
             </CardContent>
           </Card>
@@ -60,15 +59,14 @@ export default function TermsPage() {
                 <li>Accessing technical resources and documentation</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mb-3">Prohibited Activities</h3>
-              <p className="mb-4">You may not:</p>
+              <h3 className="text-xl font-semibold mb-3">Reasonable Use</h3>
+              <p className="mb-4">We ask that you use our website professionally and avoid:</p>
               <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>Use automated systems to scrape or harvest content</li>
-                <li>Attempt to gain unauthorized access to our systems</li>
-                <li>Submit false or misleading information</li>
-                <li>Interfere with website operations or security</li>
-                <li>Use the website for illegal or harmful purposes</li>
-                <li>Infringe on intellectual property rights</li>
+                <li>Automated data collection or content scraping</li>
+                <li>Attempting unauthorized system access</li>
+                <li>Submitting inaccurate technical information</li>
+                <li>Interfering with normal website operation</li>
+                <li>Activities that violate applicable laws</li>
               </ul>
             </section>
 
@@ -77,29 +75,28 @@ export default function TermsPage() {
               
               <h3 className="text-xl font-semibold mb-3">Service Agreements</h3>
               <p className="mb-6">
-                Ground station hosting services are provided under separate service agreements. 
-                These Terms apply to general website use and initial communications only. 
-                Specific service terms and SLAs are detailed in individual contracts.
+                Ground station services are provided under individual service agreements with 
+                project-specific terms, SLAs, and technical requirements. This ensures each 
+                client receives appropriate terms for their unique operational needs.
               </p>
 
-              <h3 className="text-xl font-semibold mb-3">Regulatory Compliance</h3>
-              <p className="mb-4">All services are subject to:</p>
+              <h3 className="text-xl font-semibold mb-3">Regulatory Environment</h3>
+              <p className="mb-4">Our services operate within established frameworks including:</p>
               <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>Bermuda Regulatory Authority licensing requirements</li>
-                <li>International telecommunications regulations (ITU)</li>
-                <li>Spectrum coordination with adjacent territories</li>
-                <li>Local zoning and building code compliance</li>
-                <li>Environmental and safety regulations</li>
+                <li>Bermuda Regulatory Authority licensing (efficient approval process)</li>
+                <li>ITU coordination (standard telecommunications practice)</li>
+                <li>Regional spectrum management (coordinated coverage planning)</li>
+                <li>Local compliance (established operational procedures)</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mb-3">Client Responsibilities</h3>
-              <p className="mb-4">Clients are responsible for:</p>
+              <h3 className="text-xl font-semibold mb-3">Partnership Approach</h3>
+              <p className="mb-4">We work collaboratively with clients on:</p>
               <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>Providing accurate technical specifications</li>
-                <li>Obtaining necessary equipment certifications</li>
-                <li>Maintaining operational compliance with license conditions</li>
-                <li>Timely payment of fees and charges</li>
-                <li>Coordinating with regulatory authorities as required</li>
+                <li>Technical specification development and optimization</li>
+                <li>Equipment certification support and guidance</li>
+                <li>Regulatory compliance assistance and coordination</li>
+                <li>Flexible payment terms and project scheduling</li>
+                <li>Ongoing operational support and consultation</li>
               </ul>
             </section>
 
@@ -131,33 +128,26 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">5. Disclaimers and Limitations</h2>
+              <h2 className="text-2xl font-bold tracking-tight mb-4">5. Service Information</h2>
               
-              <h3 className="text-xl font-semibold mb-3">Website Availability</h3>
+              <h3 className="text-xl font-semibold mb-3">Website Information</h3>
               <p className="mb-6">
-                We strive to maintain website availability but cannot guarantee uninterrupted access. 
-                We reserve the right to modify, suspend, or discontinue website features without notice.
+                Our website provides general service information and capabilities. Specific technical 
+                requirements and availability are confirmed through formal proposals and service agreements.
               </p>
 
-              <h3 className="text-xl font-semibold mb-3">Information Accuracy</h3>
+              <h3 className="text-xl font-semibold mb-3">Technical Specifications</h3>
               <p className="mb-6">
-                Website information is provided for general guidance only. Technical specifications 
-                and availability are subject to change. Formal proposals supersede any 
-                website information.
+                Website content serves as general guidance for our capabilities. Detailed technical 
+                specifications, pricing, and service availability are provided in individual proposals 
+                tailored to your specific project requirements.
               </p>
 
-              <h3 className="text-xl font-semibold mb-3">Third-Party Services</h3>
+              <h3 className="text-xl font-semibold mb-3">Reasonable Limitations</h3>
               <p className="mb-6">
-                Our website may contain links to third-party services or integrate with external 
-                platforms. We are not responsible for the content, policies, or practices of 
-                third-party providers.
-              </p>
-
-              <h3 className="text-xl font-semibold mb-3">Limitation of Liability</h3>
-              <p className="mb-6">
-                To the fullest extent permitted by Bermuda law, we shall not be liable for any 
-                indirect, incidental, special, or consequential damages arising from website use 
-                or service inquiries.
+                As with standard business practice, liability for website information is limited to 
+                direct damages under Bermuda law. Service-specific liability terms are addressed 
+                in individual contracts.
               </p>
             </section>
 
@@ -171,40 +161,40 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">7. Bermuda Law and Jurisdiction</h2>
-              <p className="mb-4">These Terms are governed by the laws of Bermuda, including:</p>
+              <h2 className="text-2xl font-bold tracking-tight mb-4">7. Governing Law</h2>
+              <p className="mb-4">These Terms operate under Bermuda's business-friendly legal framework:</p>
               <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>Bermuda Companies Act</li>
-                <li>Electronic Transactions Act</li>
-                <li>Personal Information Protection Act</li>
-                <li>Telecommunications Act</li>
+                <li>Bermuda Companies Act (established corporate governance)</li>
+                <li>Electronic Transactions Act (digital business recognition)</li>
+                <li>Personal Information Protection Act (PIPA compliance)</li>
+                <li>Telecommunications Act (industry-specific guidance)</li>
               </ul>
               <p className="mb-6">
-                Any disputes shall be subject to the exclusive jurisdiction of Bermuda courts, 
-                unless resolved through alternative dispute resolution mechanisms.
+                We prefer resolving any issues through direct business discussion, with Bermuda 
+                jurisdiction available as needed.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">8. Regulatory Disclaimers</h2>
+              <h2 className="text-2xl font-bold tracking-tight mb-4">8. Regulatory Support</h2>
               
-              <h3 className="text-xl font-semibold mb-3">Licensing Support</h3>
+              <h3 className="text-xl font-semibold mb-3">Licensing Assistance</h3>
               <p className="mb-6">
-                We provide regulatory assistance and consultation services but cannot guarantee 
-                license approvals. All licensing decisions are made by relevant regulatory authorities.
+                We provide experienced regulatory support and consultation, leveraging our established 
+                relationships with licensing authorities to facilitate efficient approval processes.
               </p>
 
               <h3 className="text-xl font-semibold mb-3">Spectrum Coordination</h3>
               <p className="mb-6">
-                International spectrum coordination involves multiple administrations and may 
-                experience delays beyond our control. Coordination success depends on technical 
-                parameters and international cooperation.
+                Our team manages international spectrum coordination through established ITU processes, 
+                working with multiple administrations to achieve optimal technical parameters and 
+                operational flexibility.
               </p>
 
-              <h3 className="text-xl font-semibold mb-3">Operational Compliance</h3>
+              <h3 className="text-xl font-semibold mb-3">Ongoing Support</h3>
               <p className="mb-6">
-                Clients remain responsible for ongoing operational compliance with license conditions, 
-                technical parameters, and regulatory obligations throughout the service period.
+                We provide continuous regulatory compliance support throughout service periods, 
+                helping clients maintain operational authorization and adapt to regulatory changes.
               </p>
             </section>
 
@@ -248,15 +238,15 @@ export default function TermsPage() {
                 <div className="space-y-2">
                   <div className="flex items-center">
                     <Mail className="mr-2 h-4 w-4" />
-                    <span>legal@bermuda-ground-station.com</span>
+                    <span>legal@atlanticground.com</span>
                   </div>
                   <div className="flex items-center">
                     <Phone className="mr-2 h-4 w-4" />
-                    <span>+1 (441) 555-0123</span>
+                    <span>+1 (441) 705-1547</span>
                   </div>
                   <div>
                     <strong>Business Address:</strong><br />
-                    Bermuda Ground Station Hosting<br />
+                    Atlantic Ground Station Hosting<br />
                     Legal Department<br />
                     Hamilton, Bermuda
                   </div>

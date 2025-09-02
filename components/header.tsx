@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -9,7 +10,7 @@ import { Satellite, Menu, X } from 'lucide-react';
 const navigation = [
   { name: 'Services', href: '/services' },
   { name: 'Locations', href: '/locations' },
-  { name: 'Sightings', href: '/sightings' },
+  { name: 'Space Operations', href: '/sightings' },
   { name: 'About', href: '/about' },
 ];
 
@@ -20,11 +21,16 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
-          <Link href="/" className="flex items-center space-x-2">
-            <Satellite className="h-8 w-8 text-primary" aria-hidden="true" />
-            <span className="text-xl font-bold">
-              Bermuda Ground Station
-            </span>
+          <Link href="/" className="flex items-center space-x-3">
+            <Satellite className="h-8 w-8 text-primary" />
+            <div className="flex flex-col">
+              <span className="text-lg font-bold leading-tight">
+                Atlantic Ground Station
+              </span>
+              <span className="text-xs text-muted-foreground font-medium">
+                Teleport Services
+              </span>
+            </div>
           </Link>
         </div>
 
@@ -56,8 +62,8 @@ export function Header() {
             <SheetContent side="right" className="w-72">
               <div className="flex items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2">
-                  <Satellite className="h-6 w-6 text-primary" />
-                  <span className="font-bold">BGS Hosting</span>
+                  <Satellite className="h-8 w-8 text-primary" />
+                  <span className="font-bold">AGS Hosting</span>
                 </Link>
                 <Button
                   variant="ghost"

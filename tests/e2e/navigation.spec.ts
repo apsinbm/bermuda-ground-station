@@ -5,8 +5,8 @@ test.describe('Navigation', () => {
     await page.goto('/');
     
     // Test home page
-    await expect(page).toHaveTitle(/Bermuda Ground Station/);
-    await expect(page.getByRole('heading', { name: /Bermuda Ground Station Hosting/ })).toBeVisible();
+    await expect(page).toHaveTitle(/Atlantic Ground Station/);
+    await expect(page.getByRole('heading', { name: /Atlantic Ground Station Hosting/ })).toBeVisible();
     
     // Test services navigation
     await page.getByRole('link', { name: 'Services' }).click();
@@ -54,6 +54,6 @@ test.describe('Navigation', () => {
     
     // Check OpenGraph tags
     const ogTitle = page.locator('meta[property="og:title"]');
-    await expect(ogTitle).toHaveAttribute('content', /Bermuda Ground Station/);
+    await expect(ogTitle).toHaveAttribute('content', /Atlantic Ground Station/);
   });
 });

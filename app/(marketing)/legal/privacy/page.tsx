@@ -40,10 +40,9 @@ export default function PrivacyPage() {
             </CardHeader>
             <CardContent>
               <p>
-                Bermuda Ground Station Hosting (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to protecting 
-                your privacy and personal information. This Privacy Policy explains how we collect, use, 
-                disclose, and safeguard your information when you visit our website, use our services, 
-                or communicate with us.
+                We respect your privacy and handle information in compliance with Bermuda's Personal 
+                Information Protection Act (PIPA). This policy outlines our data practices for website 
+                visitors and service inquiries in a straightforward, business-focused manner.
               </p>
             </CardContent>
           </Card>
@@ -75,20 +74,20 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className="text-2xl font-bold tracking-tight mb-4">2. How We Use Your Information</h2>
-              <p className="mb-4">We use collected information for the following purposes:</p>
+              <p className="mb-4">We use information for legitimate business purposes:</p>
               <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li><strong>Service Delivery:</strong> Providing ground station hosting services and support</li>
-                <li><strong>Communication:</strong> Responding to inquiries and providing project updates</li>
-                <li><strong>Business Development:</strong> Preparing proposals and technical assessments</li>
-                <li><strong>Regulatory Compliance:</strong> Meeting licensing and reporting requirements</li>
-                <li><strong>Website Improvement:</strong> Analyzing usage patterns to enhance user experience</li>
-                <li><strong>Marketing:</strong> Sending relevant industry updates (with consent)</li>
+                <li><strong>Service Delivery:</strong> Providing ground station hosting and technical support</li>
+                <li><strong>Business Communication:</strong> Responding to inquiries and project coordination</li>
+                <li><strong>Proposal Development:</strong> Technical assessments and service planning</li>
+                <li><strong>Regulatory Requirements:</strong> PIPA compliance and telecommunications licensing</li>
+                <li><strong>Website Analytics:</strong> Understanding usage patterns for service improvement</li>
+                <li><strong>Industry Communications:</strong> Occasional relevant updates (opt-out available)</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">3. Information Sharing and Disclosure</h2>
-              <p className="mb-4">We do not sell, trade, or rent your personal information. We may share information in the following circumstances:</p>
+              <h2 className="text-2xl font-bold tracking-tight mb-4">3. Information Sharing</h2>
+              <p className="mb-4">We do not sell personal information. Limited sharing occurs for business operations:</p>
               
               <h3 className="text-xl font-semibold mb-3">Service Providers</h3>
               <p className="mb-4">We may engage third-party service providers for:</p>
@@ -108,10 +107,10 @@ export default function PrivacyPage() {
                 <li>Respond to emergency situations</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mb-3">Regulatory Authorities</h3>
+              <h3 className="text-xl font-semibold mb-3">Regulatory Compliance</h3>
               <p className="mb-6">
-                As required for satellite communications licensing, we may share technical information 
-                with the Bermuda Regulatory Authority, ITU, and other relevant telecommunications authorities.
+                Standard telecommunications industry practice includes coordination with the Bermuda 
+                Regulatory Authority and ITU for spectrum management and licensing requirements under PIPA guidelines.
               </p>
             </section>
 
@@ -129,13 +128,13 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className="text-2xl font-bold tracking-tight mb-4">5. Data Retention</h2>
-              <p className="mb-4">We retain personal information for different periods based on the type of data:</p>
+              <p className="mb-4">We maintain information per PIPA requirements and industry standards:</p>
               <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li><strong>Contact inquiries:</strong> 2 years from last communication</li>
-                <li><strong>Client information:</strong> 7 years after contract termination (regulatory requirement)</li>
-                <li><strong>Technical data:</strong> Duration of service plus 5 years</li>
-                <li><strong>Website analytics:</strong> 24 months maximum</li>
-                <li><strong>Marketing communications:</strong> Until consent withdrawn</li>
+                <li><strong>Business inquiries:</strong> Standard 2-year retention period</li>
+                <li><strong>Client records:</strong> 7-year telecommunications industry requirement</li>
+                <li><strong>Technical documentation:</strong> Service period plus reasonable retention</li>
+                <li><strong>Website analytics:</strong> 24-month maximum for optimization</li>
+                <li><strong>Communications:</strong> Until business relationship concludes</li>
               </ul>
             </section>
 
@@ -212,15 +211,15 @@ export default function PrivacyPage() {
                 <div className="space-y-2">
                   <div className="flex items-center">
                     <Mail className="mr-2 h-4 w-4" />
-                    <span>privacy@bermuda-ground-station.com</span>
+                    <span>privacy@atlanticground.com</span>
                   </div>
                   <div className="flex items-center">
                     <Phone className="mr-2 h-4 w-4" />
-                    <span>+1 (441) 555-0123</span>
+                    <span>+1 (441) 705-1547</span>
                   </div>
                   <div>
                     <strong>Mailing Address:</strong><br />
-                    Bermuda Ground Station Hosting<br />
+                    Atlantic Ground Station Hosting<br />
                     Privacy Officer<br />
                     Hamilton, Bermuda
                   </div>

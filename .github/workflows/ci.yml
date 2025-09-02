@@ -33,7 +33,7 @@ jobs:
     - name: Build application
       run: npm run build
       env:
-        NEXT_PUBLIC_SITE_URL: https://bermuda-ground-station.com
+        NEXT_PUBLIC_SITE_URL: https://atlanticground.com
 
     - name: Install Playwright Browsers
       run: npx playwright install chromium
@@ -72,7 +72,7 @@ jobs:
     - name: Build application
       run: npm run build
       env:
-        NEXT_PUBLIC_SITE_URL: https://bermuda-ground-station.com
+        NEXT_PUBLIC_SITE_URL: https://atlanticground.com
 
     - name: Run Lighthouse CI
       run: |
@@ -113,7 +113,7 @@ jobs:
         npm run start &
         sleep 10
       env:
-        NEXT_PUBLIC_SITE_URL: https://bermuda-ground-station.com
+        NEXT_PUBLIC_SITE_URL: https://atlanticground.com
 
     - name: Run Pa11y accessibility tests
       run: npm run a11y
@@ -193,11 +193,11 @@ jobs:
     - name: Post-deployment health check
       run: |
         sleep 30
-        curl -f https://bermuda-ground-station.com/ || exit 1
-        curl -f https://bermuda-ground-station.com/services || exit 1
-        curl -f https://bermuda-ground-station.com/contact || exit 1
+        curl -f https://atlanticground.com/ || exit 1
+        curl -f https://atlanticground.com/services || exit 1
+        curl -f https://atlanticground.com/contact || exit 1
 
     - name: Update sitemap
       run: |
-        curl -X POST "https://www.google.com/ping?sitemap=https://bermuda-ground-station.com/sitemap.xml"
-        curl -X POST "https://www.bing.com/ping?sitemap=https://bermuda-ground-station.com/sitemap.xml"
+        curl -X POST "https://www.google.com/ping?sitemap=https://atlanticground.com/sitemap.xml"
+        curl -X POST "https://www.bing.com/ping?sitemap=https://atlanticground.com/sitemap.xml"

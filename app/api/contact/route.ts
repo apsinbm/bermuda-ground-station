@@ -64,7 +64,7 @@ async function sendEmailNotification(data: any): Promise<boolean> {
     `;
 
     await resend.emails.send({
-      from: 'noreply@bermuda-ground-station.com',
+      from: 'noreply@atlanticground.com',
       to: process.env.NOTIFICATION_EMAIL,
       subject: `New Ground Station Inquiry from ${data.company}`,
       text: emailContent,

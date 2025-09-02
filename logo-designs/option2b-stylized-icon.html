@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Option 2B: Stylized Satellite Icon</title>
+    <style>
+        body { 
+            background: #f8fafc; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            font-family: system-ui;
+        }
+        .logo-container { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+        }
+        .title { 
+            text-align: center; 
+            margin-bottom: 30px; 
+            color: #1f2937; 
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <h3 class="title">Option 2B: Stylized Satellite Icon</h3>
+        <svg width="200" height="200" viewBox="0 0 200 200">
+            <defs>
+                <!-- Modern gradient for satellite -->
+                <linearGradient id="satIconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#3b82f6" />
+                    <stop offset="100%" style="stop-color:#1d4ed8" />
+                </linearGradient>
+                
+                <!-- Triangle gradient -->
+                <linearGradient id="triangleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3" />
+                    <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0.1" />
+                </linearGradient>
+            </defs>
+            
+            <!-- Clean background -->
+            <circle cx="100" cy="100" r="85" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+            
+            <!-- Large, bold satellite icon -->
+            <g transform="translate(100, 50)">
+                <!-- Main satellite body (larger, geometric) -->
+                <rect x="-18" y="-12" width="36" height="24" fill="url(#satIconGrad)" rx="4" stroke="#1e40af" stroke-width="2"/>
+                
+                <!-- Solar panels (bold geometric shapes) -->
+                <rect x="-35" y="-8" width="15" height="16" fill="#1d4ed8" rx="2" stroke="#1e40af" stroke-width="2"/>
+                <rect x="20" y="-8" width="15" height="16" fill="#1d4ed8" rx="2" stroke="#1e40af" stroke-width="2"/>
+                
+                <!-- Central communication element -->
+                <circle cx="0" cy="0" r="8" fill="#ffffff" stroke="#1d4ed8" stroke-width="2"/>
+                <circle cx="0" cy="0" r="4" fill="#1d4ed8"/>
+                
+                <!-- Signal emanation lines -->
+                <g opacity="0.8">
+                    <line x1="0" y1="-8" x2="0" y2="-20" stroke="#3b82f6" stroke-width="3" stroke-linecap="round">
+                        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+                    </line>
+                    <line x1="-6" y1="-6" x2="-15" y2="-15" stroke="#3b82f6" stroke-width="2" stroke-linecap="round">
+                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.5s" repeatCount="indefinite"/>
+                    </line>
+                    <line x1="6" y1="-6" x2="15" y2="-15" stroke="#3b82f6" stroke-width="2" stroke-linecap="round">
+                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.8s" repeatCount="indefinite"/>
+                    </line>
+                </g>
+            </g>
+            
+            <!-- Large, clear triangle -->
+            <path d="M100 80 L60 140 L140 140 Z" fill="url(#triangleGrad)" stroke="#1d4ed8" stroke-width="3"/>
+            
+            <!-- Three distinct signal beams forming the triangle -->
+            <g opacity="0.9">
+                <!-- Central beam -->
+                <line x1="100" y1="75" x2="100" y2="140" stroke="#3b82f6" stroke-width="4" stroke-linecap="round">
+                    <animate attributeName="stroke-width" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+                </line>
+                
+                <!-- Left beam -->
+                <line x1="100" y1="75" x2="60" y2="140" stroke="#3b82f6" stroke-width="3" stroke-linecap="round">
+                    <animate attributeName="stroke-width" values="3;5;3" dur="2.3s" repeatCount="indefinite"/>
+                </line>
+                
+                <!-- Right beam -->
+                <line x1="100" y1="75" x2="140" y2="140" stroke="#3b82f6" stroke-width="3" stroke-linecap="round">
+                    <animate attributeName="stroke-width" values="3;5;3" dur="2.7s" repeatCount="indefinite"/>
+                </line>
+            </g>
+            
+            <!-- Bermuda marker (prominent) -->
+            <circle cx="100" cy="125" r="6" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+            <text x="100" y="130" text-anchor="middle" font-size="4" fill="#ffffff" font-weight="bold">B</text>
+            
+            <!-- Coverage area endpoints -->
+            <circle cx="60" cy="140" r="4" fill="#3b82f6" opacity="0.8"/>
+            <circle cx="140" cy="140" r="4" fill="#3b82f6" opacity="0.8"/>
+            
+            <!-- Minimal text -->
+            <text x="100" y="175" text-anchor="middle" font-size="12" fill="#1d4ed8" font-weight="700">BERMUDA</text>
+            <text x="100" y="190" text-anchor="middle" font-size="8" fill="#64748b" font-weight="500">GROUND STATION</text>
+            
+            <!-- Clean signal ripples -->
+            <g opacity="0.4">
+                <circle cx="100" cy="125" r="15" fill="none" stroke="#dc2626" stroke-width="2">
+                    <animate attributeName="r" values="15;25;15" dur="3s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+        </svg>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logo Option 2: Orbiting Satellite</title>
+    <style>
+        body { 
+            background: #f8fafc; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            font-family: system-ui;
+        }
+        .logo-container { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+        }
+        .title { 
+            text-align: center; 
+            margin-bottom: 30px; 
+            color: #1f2937; 
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <h3 class="title">Option 2: Satellite Orbiting Bermuda Triangle</h3>
+        <svg width="200" height="200" viewBox="0 0 200 200">
+            <!-- Background -->
+            <circle cx="100" cy="100" r="90" fill="#f0f9ff" stroke="#e0f2fe" stroke-width="2"/>
+            
+            <!-- Earth/Ocean representation -->
+            <circle cx="100" cy="140" r="35" fill="#0ea5e9" opacity="0.3"/>
+            <circle cx="100" cy="140" r="30" fill="#0284c7" opacity="0.2"/>
+            
+            <!-- Bermuda triangle on Earth -->
+            <path d="M100 130 L110 145 L90 145 Z" fill="#dc2626" opacity="0.8"/>
+            <text x="100" y="155" text-anchor="middle" font-size="6" fill="#dc2626" font-weight="bold">BERMUDA</text>
+            
+            <!-- Orbital paths (triangle-shaped) -->
+            <path d="M100 30 L160 120 L40 120 Z" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="8,4" opacity="0.6">
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 100 100;360 100 100" dur="20s" repeatCount="indefinite"/>
+            </path>
+            
+            <!-- Satellite -->
+            <g>
+                <!-- Satellite body -->
+                <rect x="95" y="25" width="10" height="15" fill="#64748b" rx="2">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 100 100;360 100 100" dur="20s" repeatCount="indefinite"/>
+                </rect>
+                
+                <!-- Solar panels -->
+                <rect x="85" y="28" width="8" height="9" fill="#1d4ed8" opacity="0.8">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 100 100;360 100 100" dur="20s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="107" y="28" width="8" height="9" fill="#1d4ed8" opacity="0.8">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 100 100;360 100 100" dur="20s" repeatCount="indefinite"/>
+                </rect>
+                
+                <!-- Antenna -->
+                <line x1="100" y1="25" x2="100" y2="20" stroke="#475569" stroke-width="1">
+                    <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 100 100;360 100 100" dur="20s" repeatCount="indefinite"/>
+                </line>
+            </g>
+            
+            <!-- Communication beams from satellite to triangle -->
+            <g opacity="0.7">
+                <line x1="100" y1="40" x2="100" y2="130" stroke="#3b82f6" stroke-width="2" stroke-dasharray="3,3">
+                    <animate attributeName="stroke-dashoffset" values="0;6" dur="1s" repeatCount="indefinite"/>
+                </line>
+                <line x1="100" y1="40" x2="110" y2="145" stroke="#3b82f6" stroke-width="2" stroke-dasharray="3,3">
+                    <animate attributeName="stroke-dashoffset" values="0;6" dur="1s" begin="0.3s" repeatCount="indefinite"/>
+                </line>
+                <line x1="100" y1="40" x2="90" y2="145" stroke="#3b82f6" stroke-width="2" stroke-dasharray="3,3">
+                    <animate attributeName="stroke-dashoffset" values="0;6" dur="1s" begin="0.6s" repeatCount="indefinite"/>
+                </line>
+            </g>
+            
+            <!-- Signal waves emanating from Bermuda -->
+            <g opacity="0.4">
+                <circle cx="100" cy="140" r="15" fill="none" stroke="#dc2626" stroke-width="1">
+                    <animate attributeName="r" values="15;25;15" dur="2s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="100" cy="140" r="20" fill="none" stroke="#dc2626" stroke-width="1">
+                    <animate attributeName="r" values="20;30;20" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+                </circle>
+            </g>
+        </svg>
+    </div>
+</body>
+</html>
