@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **Atlantic Ground Station Hosting** website - a professional Next.js marketing site showcasing satellite ground station hosting services from Bermuda's strategic North Atlantic location. The site targets satellite operators, broadcasters, and global enterprises needing reliable ground infrastructure.
+This is a **Atlantic Ground Station** website - a professional Next.js marketing site showcasing satellite ground station hosting services from Bermuda's strategic North Atlantic location. The site targets satellite operators, broadcasters, and global enterprises needing reliable ground infrastructure.
 
 ## Architecture
 

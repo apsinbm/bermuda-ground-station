@@ -18,8 +18,8 @@ export function generateSEO({
   canonical,
 }: SEOProps = {}): Metadata {
   const fullTitle = title 
-    ? `${title} | Atlantic Ground Station Hosting`
-    : 'Atlantic Ground Station Hosting | North Atlantic Satellite Gateway | 24/7 Support';
+    ? `${title} | Atlantic Ground Station`
+    : 'Atlantic Ground Station | North Atlantic Satellite Gateway | 24/7 Support';
 
   return {
     metadataBase: new URL(siteUrl),
@@ -34,13 +34,13 @@ export function generateSEO({
       url: canonical || siteUrl,
       title: fullTitle,
       description,
-      siteName: 'Atlantic Ground Station Hosting',
+      siteName: 'Atlantic Ground Station',
       images: [
         {
           url: image,
           width: 1200,
           height: 630,
-          alt: title || 'Atlantic Ground Station Hosting',
+          alt: title || 'Atlantic Ground Station',
         },
       ],
     },

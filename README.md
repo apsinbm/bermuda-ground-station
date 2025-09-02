@@ -1,4 +1,4 @@
-# Atlantic Ground Station Hosting
+# Atlantic Ground Station
 
 A professional marketing website for satellite ground station hosting services in Bermuda's strategic North Atlantic location.
 

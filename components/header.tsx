@@ -63,7 +63,7 @@ export function Header() {
               <div className="flex items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2">
                   <Satellite className="h-8 w-8 text-primary" />
-                  <span className="font-bold">AGS Hosting</span>
+                  <span className="font-bold">AGS</span>
                 </Link>
                 <Button
                   variant="ghost"

@@ -219,7 +219,7 @@ export default function PrivacyPage() {
                   </div>
                   <div>
                     <strong>Mailing Address:</strong><br />
-                    Atlantic Ground Station Hosting<br />
+                    Atlantic Ground Station<br />
                     Privacy Officer<br />
                     Hamilton, Bermuda
                   </div>

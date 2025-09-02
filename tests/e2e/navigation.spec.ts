@@ -6,7 +6,7 @@ test.describe('Navigation', () => {
     
     // Test home page
     await expect(page).toHaveTitle(/Atlantic Ground Station/);
-    await expect(page.getByRole('heading', { name: /Atlantic Ground Station Hosting/ })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /Atlantic Ground Station/ })).toBeVisible();
     
     // Test services navigation
     await page.getByRole('link', { name: 'Services' }).click();
@@ -46,7 +46,7 @@ test.describe('Navigation', () => {
     await page.goto('/');
     
     // Check title
-    await expect(page).toHaveTitle(/North Atlantic Ground Station Hosting/);
+    await expect(page).toHaveTitle(/North Atlantic Ground Station/);
     
     // Check meta description
     const metaDescription = page.locator('meta[name="description"]');

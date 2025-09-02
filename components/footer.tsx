@@ -92,7 +92,7 @@ export function Footer() {
         <div className="mt-12 border-t pt-8">
           <div className="flex items-center justify-between">
             <p className="text-xs text-muted-foreground">
-              &copy; {new Date().getFullYear()} Atlantic Ground Station Hosting. All rights reserved.
+              &copy; {new Date().getFullYear()} Atlantic Ground Station. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground">
               Proudly serving from Bermuda&apos;s strategic North Atlantic location

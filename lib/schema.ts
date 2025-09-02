@@ -3,8 +3,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://atlanticground.com'
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Atlantic Ground Station Hosting',
-  alternateName: ['AGS Hosting', 'Atlantic Teleport Services'],
+  name: 'Atlantic Ground Station',
+  alternateName: ['AGS', 'Atlantic Teleport Services'],
   url: siteUrl,
   logo: `${siteUrl}/logo.svg`,
   description: 'Professional teleport and earth station hosting from Bermuda\'s strategic North Atlantic location for satellite communications',
@@ -30,7 +30,7 @@ export const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   '@id': `${siteUrl}#organization`,
-  name: 'Atlantic Ground Station Hosting',
+  name: 'Atlantic Ground Station',
   image: `${siteUrl}/og-image.jpg`,
   url: siteUrl,
   telephone: '+1-441-705-1547',
@@ -65,7 +65,7 @@ export const websiteSchema = {
   '@type': 'WebSite',
   '@id': `${siteUrl}#website`,
   url: siteUrl,
-  name: 'Atlantic Ground Station Hosting',
+  name: 'Atlantic Ground Station',
   description: 'Atlantic ground station hosting services from Bermuda',
   publisher: {
     '@id': `${siteUrl}#organization`,

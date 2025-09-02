@@ -246,7 +246,7 @@ export default function TermsPage() {
                   </div>
                   <div>
                     <strong>Business Address:</strong><br />
-                    Atlantic Ground Station Hosting<br />
+                    Atlantic Ground Station<br />
                     Legal Department<br />
                     Hamilton, Bermuda
                   </div>
