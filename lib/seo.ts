@@ -12,14 +12,14 @@ interface SEOProps {
 
 export function generateSEO({
   title,
-  description = 'Your 24/7 Atlantic teleport partner. Professional ground station and earth station hosting from Bermuda with 30+ years experience. Hurricane-rated facilities, 700+ miles offshore, minimal RF interference.',
+  description = 'Global Atlantic teleport services. Professional ground station and earth station hosting with 30+ years experience. Strategic North Atlantic location, hurricane-rated facilities, minimal RF interference for worldwide satellite operations.',
   image = `${siteUrl}/og-image.jpg`,
   noIndex = false,
   canonical,
 }: SEOProps = {}): Metadata {
   const fullTitle = title 
     ? `${title} | Atlantic Ground Station`
-    : 'Atlantic Ground Station | North Atlantic Satellite Gateway | 24/7 Support';
+    : 'Atlantic Ground Station | Global Satellite Gateway | North Atlantic Teleport';
 
   return {
     metadataBase: new URL(siteUrl),

@@ -37,19 +37,15 @@ export function Footer() {
               Professional ground station services with regulatory support and 
               carrier-grade transatlantic connectivity.
             </p>
-            <div className="space-y-2">
+            <div className="space-y-3">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4" />
-                <span>Hamilton, Bermuda</span>
+                <span>North Atlantic Location</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4" />
-                <span>+1 (441) 705-1547</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+              <Link href="/contact" className="inline-flex items-center space-x-2 text-sm bg-primary/10 hover:bg-primary/20 text-primary px-3 py-2 rounded-md transition-colors">
                 <Mail className="h-4 w-4" />
-                <span>info@atlanticground.com</span>
-              </div>
+                <span>Contact Our Team</span>
+              </Link>
             </div>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">

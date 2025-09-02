@@ -32,6 +32,13 @@ export function ContactForm({ className }: ContactFormProps) {
   });
 
   const onSubmit = async (data: Omit<ContactFormData, 'hCaptchaToken'>) => {
+    // Honeypot check - if filled, it's a bot
+    const honeypotField = (data as any).website;
+    if (honeypotField && honeypotField.trim() !== '') {
+      // Silently reject bot submission
+      return;
+    }
+
     if (!hCaptchaToken) {
       setErrorMessage('Please complete the captcha');
       return;
@@ -388,6 +395,17 @@ export function ContactForm({ className }: ContactFormProps) {
             {errors.message && (
               <p id="message-error" role="alert" className="mt-1 text-sm text-red-600">{errors.message.message}</p>
             )}
+          </div>
+
+          {/* Honeypot field - hidden from users, visible to bots */}
+          <div className="absolute -left-9999px" aria-hidden="true">
+            <label htmlFor="website">Website (leave blank)</label>
+            <Input
+              id="website"
+              {...register('website' as any)}
+              tabIndex={-1}
+              autoComplete="off"
+            />
           </div>
 
           {process.env.NEXT_PUBLIC_HCAPTCHA_SITE_KEY && (
