@@ -398,11 +398,12 @@ export function ContactForm({ className }: ContactFormProps) {
           </div>
 
           {/* Honeypot field - hidden from users, visible to bots */}
-          <div className="absolute -left-9999px" aria-hidden="true">
-            <label htmlFor="website">Website (leave blank)</label>
-            <Input
+          <div style={{ position: 'absolute', left: '-9999px', top: '-9999px', visibility: 'hidden' }} aria-hidden="true">
+            <label htmlFor="website">Website</label>
+            <input
+              type="text"
               id="website"
-              {...register('website' as any)}
+              name="website"
               tabIndex={-1}
               autoComplete="off"
             />
