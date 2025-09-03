@@ -60,6 +60,7 @@ public/
 - **Performance**: Next.js image optimization, responsive design, fast loading
 - **SEO**: Structured data (JSON-LD), meta tags, OpenGraph, Twitter Cards
 - **Accessibility**: ARIA labels, semantic HTML, keyboard navigation
+- **Design Consistency**: Standardized typography with `text-5xl font-black sm:text-7xl` across all page titles
 
 ### Media Integration
 - **YouTube**: Embedded SpaceX launch videos with CSP-secured iframes
@@ -92,6 +93,13 @@ npm run test:headed     # Playwright tests with browser UI
 ```
 
 ## Security Configuration
+
+### Bot Protection & Anti-Spam
+- **Middleware Rate Limiting**: 100 requests/hour per IP address
+- **User Agent Blocking**: Blocks common scrapers and bots
+- **hCaptcha Integration**: Contact form protection with honeypot fields
+- **Email Obfuscation**: Contact information protected from scrapers
+- **Contact Phone**: +1-310-363-6000 (California number for international appeal)
 
 ### Content Security Policy
 Configured in `next.config.js` with specific allowlists for:
@@ -145,9 +153,16 @@ Configured in `next.config.js` with specific allowlists for:
 ## Deployment Notes
 
 - **Platform**: Optimized for Vercel deployment
+- **Live URL**: https://bermuda-ground-station.vercel.app
 - **Environment**: Production builds require environment variables
 - **Performance**: Next.js optimizations enabled (images, fonts, compression)
 - **Monitoring**: Vercel Analytics integration for performance tracking
+- **Auto-Deploy**: GitHub pushes to main branch trigger automatic Vercel deployments
+
+### Recent Updates
+- **Phone Number**: Updated to +1-310-363-6000 across all contact points
+- **Typography**: Standardized page title headers for visual consistency
+- **Security**: Comprehensive bot protection and spam prevention measures
 
 ## Business Context
 
