@@ -39,7 +39,7 @@ export default function HomePage() {
         {/* Content */}
         <div className="relative px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="text-5xl font-black tracking-tight sm:text-7xl bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+            <h1 className="text-5xl font-black tracking-tight sm:text-7xl mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               Atlantic Teleport & Ground Station Services
             </h1>
             <p className="mt-6 text-lg leading-8 text-white/90 max-w-3xl mx-auto">

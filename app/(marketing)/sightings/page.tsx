@@ -57,7 +57,7 @@ export default function SightingsPage() {
                 <Rocket className="h-8 w-8 text-primary" />
               </div>
             </div>
-            <h1 className="text-5xl font-black tracking-tight sm:text-7xl">
+            <h1 className="text-5xl font-black tracking-tight sm:text-7xl mb-6 bg-gradient-to-r from-gray-900 to-primary bg-clip-text text-transparent">
               Space Operations from Bermuda
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
