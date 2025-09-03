@@ -45,7 +45,7 @@ export default function LocationsPage() {
         {/* Content */}
         <div className="relative z-10 mx-auto max-w-4xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
           <div className="text-center text-white">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
+            <h1 className="text-5xl font-black tracking-tight sm:text-7xl mb-6">
               Where Space Missions Connect to Earth
             </h1>
             <p className="mt-6 text-xl leading-8 text-white/90 max-w-3xl mx-auto">
