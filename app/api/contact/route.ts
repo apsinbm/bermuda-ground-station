@@ -126,7 +126,7 @@ export async function POST(request: NextRequest) {
 
     // Verify hCaptcha (skip if token not provided in development)
     if (data.hCaptchaToken && data.hCaptchaToken !== 'development-bypass') {
-      const isHCaptchaValid = await verifyHCaptcha(data.hCaptchaToken);
+      const isHCaptchaValid = await verifyHCaptcha(data.hCaptchaToken as string);
       if (!isHCaptchaValid) {
         return NextResponse.json(
           { message: 'Captcha verification failed' },
