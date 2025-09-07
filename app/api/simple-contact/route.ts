@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
           to: [process.env.NOTIFICATION_EMAIL],
           subject: `New Contact from ${name} - Atlantic Ground Station`,
           html: emailContent,
-          replyTo: email,
+          reply_to: email,
         });
 
         if (error) {
