@@ -51,13 +51,11 @@ async function sendEmailNotification(data: any): Promise<boolean> {
       
       <h3>Technical Requirements</h3>
       <p><strong>Use Case:</strong> ${data.useCase}</p>
-      <p><strong>Frequency Bands:</strong> ${data.frequencies.join(', ')}</p>
-      <p><strong>Antenna Size:</strong> ${data.dishSize}</p>
-      <p><strong>Operation:</strong> ${data.transmitReceive}</p>
-      <p><strong>Power Required:</strong> ${data.powerRequirement}</p>
-      <p><strong>Location Preference:</strong> ${data.locationPreference.join(', ')}</p>
-      <p><strong>Timeline:</strong> ${data.timeline}</p>
-      <p><strong>Budget:</strong> ${data.budget || 'Not specified'}</p>
+      ${data.frequencies && data.frequencies.length > 0 ? `<p><strong>Frequency Bands:</strong> ${data.frequencies.join(', ')}</p>` : ''}
+      ${data.dishSize ? `<p><strong>Antenna Size:</strong> ${data.dishSize}</p>` : ''}
+      ${data.transmitReceive ? `<p><strong>Operation:</strong> ${data.transmitReceive}</p>` : ''}
+      ${data.powerRequirement ? `<p><strong>Power Required:</strong> ${data.powerRequirement}</p>` : ''}
+      ${data.locationPreference && data.locationPreference.length > 0 ? `<p><strong>Location Preference:</strong> ${data.locationPreference.join(', ')}</p>` : ''}
       
       <h3>Additional Requirements</h3>
       <div style="background-color: #f5f5f5; padding: 15px; border-left: 4px solid #007bff; margin: 10px 0;">

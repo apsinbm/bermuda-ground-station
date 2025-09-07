@@ -30,25 +30,21 @@ export const contactFormSchema = z.object({
     }),
   frequencies: z
     .array(z.enum(['uhf', 'l-band', 'c-band', 'x-band', 'ku-band', 'ka-band', 'other']))
-    .min(1, 'Please select at least one frequency band'),
+    .optional()
+    .default([]),
   dishSize: z
     .enum(['small-1m', 'medium-2-5m', 'large-5-10m', 'xl-10m-plus'])
-    .refine((val) => val !== undefined, {
-      message: 'Please select a dish size',
-    }),
+    .optional(),
   transmitReceive: z
     .enum(['receive-only', 'transmit-only', 'both'])
-    .refine((val) => val !== undefined, {
-      message: 'Please specify transmit/receive requirements',
-    }),
+    .optional(),
   powerRequirement: z
     .enum(['low-1kw', 'medium-1-5kw', 'high-5-10kw', 'xl-10kw-plus'])
-    .refine((val) => val !== undefined, {
-      message: 'Please select power requirements',
-    }),
+    .optional(),
   locationPreference: z
     .array(z.enum(['rooftop', 'satellite-farm', 'datacenter']))
-    .min(1, 'Please select at least one location type'),
+    .optional()
+    .default([]),
   message: z
     .string()
     .min(10, 'Please provide at least 10 characters describing your requirements')
