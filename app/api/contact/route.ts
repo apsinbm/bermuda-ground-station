@@ -40,34 +40,43 @@ async function sendEmailNotification(data: any): Promise<boolean> {
     const { Resend } = await import('resend');
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    const emailContent = `
-      New Ground Station Inquiry
+    const htmlContent = `
+      <h2>New Ground Station Inquiry - Atlantic Ground Station</h2>
       
-      Contact Information:
-      - Name: ${data.firstName} ${data.lastName}
-      - Email: ${data.email}
-      - Company: ${data.company}
-      - Phone: ${data.phoneNumber || 'Not provided'}
+      <h3>Contact Information</h3>
+      <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
+      <p><strong>Email:</strong> ${data.email}</p>
+      <p><strong>Company:</strong> ${data.company}</p>
+      <p><strong>Phone:</strong> ${data.phoneNumber || 'Not provided'}</p>
       
-      Technical Requirements:
-      - Use Case: ${data.useCase}
-      - Frequency Bands: ${data.frequencies.join(', ')}
-      - Antenna Size: ${data.dishSize}
-      - Operation: ${data.transmitReceive}
-      - Power Required: ${data.powerRequirement}
-      - Location Preference: ${data.locationPreference.join(', ')}
-      - Timeline: ${data.timeline}
-      - Budget: ${data.budget || 'Not specified'}
+      <h3>Technical Requirements</h3>
+      <p><strong>Use Case:</strong> ${data.useCase}</p>
+      <p><strong>Frequency Bands:</strong> ${data.frequencies.join(', ')}</p>
+      <p><strong>Antenna Size:</strong> ${data.dishSize}</p>
+      <p><strong>Operation:</strong> ${data.transmitReceive}</p>
+      <p><strong>Power Required:</strong> ${data.powerRequirement}</p>
+      <p><strong>Location Preference:</strong> ${data.locationPreference.join(', ')}</p>
+      <p><strong>Timeline:</strong> ${data.timeline}</p>
+      <p><strong>Budget:</strong> ${data.budget || 'Not specified'}</p>
       
-      Additional Requirements:
-      ${data.message}
+      <h3>Additional Requirements</h3>
+      <div style="background-color: #f5f5f5; padding: 15px; border-left: 4px solid #007bff; margin: 10px 0;">
+        ${data.message.replace(/\n/g, '<br>')}
+      </div>
+      
+      <hr>
+      <p style="color: #666; font-size: 12px;">
+        Sent from Atlantic Ground Station contact form<br>
+        Time: ${new Date().toLocaleString()}
+      </p>
     `;
 
     await resend.emails.send({
-      from: 'noreply@atlanticground.com',
-      to: process.env.NOTIFICATION_EMAIL,
+      from: 'Atlantic Ground Station <noreply@atlanticground.com>',
+      to: [process.env.NOTIFICATION_EMAIL],
       subject: `New Ground Station Inquiry from ${data.company}`,
-      text: emailContent,
+      html: htmlContent,
+      reply_to: data.email,
     });
 
     return true;

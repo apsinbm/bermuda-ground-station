@@ -1,4 +1,4 @@
-import { SimpleContactForm } from '@/components/simple-contact-form';
+import { ContactForm } from '@/components/contact-form';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
   Phone, 
@@ -54,7 +54,7 @@ export default function ContactPage() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           <div>
-            <SimpleContactForm />
+            <ContactForm />
           </div>
           
           <div className="space-y-8">
