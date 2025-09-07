@@ -1,4 +1,4 @@
-import { ContactForm } from '@/components/contact-form';
+import { SimpleContactForm } from '@/components/simple-contact-form';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
   Phone, 
@@ -16,11 +16,13 @@ const contactMethods = [
   {
     name: 'Phone',
     contact: '+1 (441) 705-1547',
+    href: 'tel:+14417051547',
     icon: Phone,
   },
   {
     name: 'Email',
     contact: 'info@atlanticground.com',
+    href: 'mailto:info@atlanticground.com',
     icon: Mail,
   },
   {
@@ -52,7 +54,7 @@ export default function ContactPage() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           <div>
-            <ContactForm />
+            <SimpleContactForm />
           </div>
           
           <div className="space-y-8">
@@ -70,7 +72,16 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <h3 className="font-medium">{method.name}</h3>
-                          <p className="text-sm text-muted-foreground">{method.contact}</p>
+                          {method.href ? (
+                            <a 
+                              href={method.href}
+                              className="text-sm text-muted-foreground hover:text-foreground hover:underline"
+                            >
+                              {method.contact}
+                            </a>
+                          ) : (
+                            <p className="text-sm text-muted-foreground">{method.contact}</p>
+                          )}
                         </div>
                       </div>
                     </CardContent>

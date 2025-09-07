@@ -15,7 +15,7 @@ export const organizationSchema = {
   },
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+1-310-363-6000',
+    telephone: '+1 (441) 705-1547',
     contactType: 'Technical Support',
     areaServed: ['North Atlantic', 'Caribbean', 'Americas', 'Europe'],
     availableLanguage: ['English'],
@@ -33,7 +33,7 @@ export const localBusinessSchema = {
   name: 'Atlantic Ground Station',
   image: `${siteUrl}/og-image.jpg`,
   url: siteUrl,
-  telephone: '+1-310-363-6000',
+  telephone: '+1 (441) 705-1547',
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'BM',
