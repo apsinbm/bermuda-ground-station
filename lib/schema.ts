@@ -7,7 +7,7 @@ export const organizationSchema = {
   alternateName: ['AGS', 'Atlantic Teleport Services'],
   url: siteUrl,
   logo: `${siteUrl}/logo.svg`,
-  description: 'Professional teleport and earth station hosting from Bermuda\'s strategic North Atlantic location for satellite communications',
+  description: 'Global satellite teleport services and ground station hosting. Strategic North Atlantic positioning for worldwide satellite communications coverage.',
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'BM',

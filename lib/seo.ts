@@ -12,7 +12,7 @@ interface SEOProps {
 
 export function generateSEO({
   title,
-  description = 'Global Atlantic teleport services. Professional ground station and earth station hosting with 30+ years experience. Strategic North Atlantic location, hurricane-rated facilities, minimal RF interference for worldwide satellite operations.',
+  description = 'Global satellite teleport services. Professional ground station hosting for Europe, Americas, and global coverage. 30+ years experience, strategic North Atlantic positioning, enterprise-grade facilities for worldwide satellite operations.',
   image = `${siteUrl}/og-image.jpg`,
   noIndex = false,
   canonical,
@@ -27,6 +27,13 @@ export function generateSEO({
     description,
     alternates: {
       canonical: canonical || siteUrl,
+      languages: {
+        'en-US': siteUrl,
+        'en-GB': siteUrl,
+        'en-CA': siteUrl,
+        'en-AU': siteUrl,
+        'en': siteUrl,
+      },
     },
     openGraph: {
       type: 'website',
