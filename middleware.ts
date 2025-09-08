@@ -1,14 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// Bot user agents to block
+// Bot user agents to block (be more specific to avoid blocking legitimate users)
 const BLOCKED_USER_AGENTS = [
   'scrapy',
   'python-requests',
-  'curl',
   'wget',
-  'bot',
   'spider',
-  'crawler',
   'scraper',
   'harvest',
   'extract',
