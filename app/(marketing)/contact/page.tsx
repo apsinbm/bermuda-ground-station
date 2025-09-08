@@ -1,7 +1,5 @@
-import { ContactForm } from '@/components/contact-form';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { 
-  Phone, 
   Mail, 
   MapPin
 } from 'lucide-react';
@@ -13,12 +11,6 @@ export const metadata = generateSEO({
 });
 
 const contactMethods = [
-  {
-    name: 'Phone',
-    contact: '+1 (441) 705-1547',
-    href: 'tel:+14417051547',
-    icon: Phone,
-  },
   {
     name: 'Email',
     contact: 'info@atlanticground.com',
@@ -52,11 +44,7 @@ export default function ContactPage() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
-          <div>
-            <ContactForm />
-          </div>
-          
+        <div className="max-w-lg mx-auto">
           <div className="space-y-8">
             <div>
               <h2 className="text-2xl font-bold tracking-tight mb-6">

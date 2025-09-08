@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Scale, Mail, Phone } from 'lucide-react';
+import { Scale, Mail } from 'lucide-react';
 import { generateSEO } from '@/lib/seo';
 
 export const metadata = generateSEO({
@@ -25,7 +25,7 @@ export default function TermsPage() {
               Terms of Service
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Last updated: January 15, 2024
+              Last updated: May 15, 2024
             </p>
           </div>
         </div>
@@ -36,191 +36,96 @@ export default function TermsPage() {
           
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle>Agreement to Terms</CardTitle>
+              <CardTitle>1. Agreement to Terms</CardTitle>
             </CardHeader>
             <CardContent>
+              <p className="mb-4">
+                By accessing or using this website, you agree to be bound by these Terms of Service and by our Privacy Policy. 
+                If you do not agree, please discontinue use.
+              </p>
               <p>
-                These terms cover website use and general business practices. Specific service agreements 
-                are handled separately with appropriate terms tailored to your project requirements.
+                Our website terms apply to general browsing and inquiries. Specific ground station services are governed by 
+                separate service agreements, which set out detailed technical, commercial, and regulatory terms for each project.
               </p>
             </CardContent>
           </Card>
 
           <div className="space-y-8">
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">1. Website Use</h2>
+              <h2 className="text-2xl font-bold tracking-tight mb-4">2. Website Use</h2>
               
               <h3 className="text-xl font-semibold mb-3">Permitted Use</h3>
-              <p className="mb-4">You may use our website for:</p>
+              <p className="mb-4">You may use this website for:</p>
               <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>Learning about our ground station hosting services</li>
-                <li>Requesting information and proposals</li>
-                <li>Contacting our team for business inquiries</li>
-                <li>Accessing technical resources and documentation</li>
+                <li>Learning about our services</li>
+                <li>Requesting information or proposals</li>
+                <li>Contacting our team</li>
+                <li>Accessing technical resources</li>
               </ul>
 
-              <h3 className="text-xl font-semibold mb-3">Reasonable Use</h3>
-              <p className="mb-4">We ask that you use our website professionally and avoid:</p>
+              <h3 className="text-xl font-semibold mb-3">Prohibited Use</h3>
+              <p className="mb-4">You agree not to:</p>
               <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>Automated data collection or content scraping</li>
-                <li>Attempting unauthorized system access</li>
-                <li>Submitting inaccurate technical information</li>
-                <li>Interfering with normal website operation</li>
-                <li>Activities that violate applicable laws</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">2. Ground Station Services</h2>
-              
-              <h3 className="text-xl font-semibold mb-3">Service Agreements</h3>
-              <p className="mb-6">
-                Ground station services are provided under individual service agreements with 
-                project-specific terms, SLAs, and technical requirements. This ensures each 
-                client receives appropriate terms for their unique operational needs.
-              </p>
-
-              <h3 className="text-xl font-semibold mb-3">Regulatory Environment</h3>
-              <p className="mb-4">Our services operate within established frameworks including:</p>
-              <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>Bermuda Regulatory Authority licensing (efficient approval process)</li>
-                <li>ITU coordination (standard telecommunications practice)</li>
-                <li>Regional spectrum management (coordinated coverage planning)</li>
-                <li>Local compliance (established operational procedures)</li>
-              </ul>
-
-              <h3 className="text-xl font-semibold mb-3">Partnership Approach</h3>
-              <p className="mb-4">We work collaboratively with clients on:</p>
-              <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>Technical specification development and optimization</li>
-                <li>Equipment certification support and guidance</li>
-                <li>Regulatory compliance assistance and coordination</li>
-                <li>Flexible payment terms and project scheduling</li>
-                <li>Ongoing operational support and consultation</li>
+                <li>Attempt unauthorized access or interfere with website operations</li>
+                <li>Use automated tools to collect data or content</li>
+                <li>Submit false, misleading, or incomplete information</li>
+                <li>Violate applicable laws in connection with website use</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">3. Intellectual Property</h2>
-              
-              <h3 className="text-xl font-semibold mb-3">Our Content</h3>
+              <h2 className="text-2xl font-bold tracking-tight mb-4">3. Ground Station Services</h2>
               <p className="mb-6">
-                All website content, including text, graphics, logos, and technical documentation, 
-                is owned by us or our licensors. Content is protected by copyright, trademark, 
-                and other intellectual property laws.
-              </p>
-
-              <h3 className="text-xl font-semibold mb-3">Your Content</h3>
-              <p className="mb-6">
-                By submitting information through our website (contact forms, proposals), you grant 
-                us a limited license to use this information for business purposes, including 
-                proposal preparation and regulatory filings.
+                Our ground station services are provided under separate, detailed agreements that cover technical specifications, service levels, and project requirements.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">4. Privacy and Data Protection</h2>
+              <h2 className="text-2xl font-bold tracking-tight mb-4">4. Intellectual Property</h2>
               <p className="mb-6">
-                Your privacy is important to us. Please review our Privacy Policy, which explains 
-                how we collect, use, and protect your personal information. By using our services, 
-                you consent to the collection and use of information as described in our Privacy Policy.
+                Website content belongs to us. When you contact us, we can use your information to respond and prepare proposals.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">5. Service Information</h2>
-              
-              <h3 className="text-xl font-semibold mb-3">Website Information</h3>
+              <h2 className="text-2xl font-bold tracking-tight mb-4">5. Privacy and Data Protection</h2>
               <p className="mb-6">
-                Our website provides general service information and capabilities. Specific technical 
-                requirements and availability are confirmed through formal proposals and service agreements.
-              </p>
-
-              <h3 className="text-xl font-semibold mb-3">Technical Specifications</h3>
-              <p className="mb-6">
-                Website content serves as general guidance for our capabilities. Detailed technical 
-                specifications, pricing, and service availability are provided in individual proposals 
-                tailored to your specific project requirements.
-              </p>
-
-              <h3 className="text-xl font-semibold mb-3">Reasonable Limitations</h3>
-              <p className="mb-6">
-                As with standard business practice, liability for website information is limited to 
-                direct damages under Bermuda law. Service-specific liability terms are addressed 
-                in individual contracts.
+                Please see our Privacy Policy for details on how we handle your information.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">6. Force Majeure</h2>
+              <h2 className="text-2xl font-bold tracking-tight mb-4">6. Service Information and Limitations</h2>
               <p className="mb-6">
-                We are not liable for delays or failures due to circumstances beyond our reasonable 
-                control, including natural disasters, regulatory changes, labor disputes, or 
-                telecommunications infrastructure failures.
+                Our website provides general information. Specific services, pricing, and availability are confirmed in individual proposals. We limit our liability as is standard business practice.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">7. Governing Law</h2>
-              <p className="mb-4">These Terms operate under Bermuda's business-friendly legal framework:</p>
-              <ul className="list-disc pl-6 mb-6 space-y-2">
-                <li>Bermuda Companies Act (established corporate governance)</li>
-                <li>Electronic Transactions Act (digital business recognition)</li>
-                <li>Personal Information Protection Act (PIPA compliance)</li>
-                <li>Telecommunications Act (industry-specific guidance)</li>
-              </ul>
+              <h2 className="text-2xl font-bold tracking-tight mb-4">7. Force Majeure</h2>
               <p className="mb-6">
-                We prefer resolving any issues through direct business discussion, with Bermuda 
-                jurisdiction available as needed.
+                We're not responsible for problems caused by events beyond our control (natural disasters, government actions, etc.).
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">8. Regulatory Support</h2>
-              
-              <h3 className="text-xl font-semibold mb-3">Licensing Assistance</h3>
+              <h2 className="text-2xl font-bold tracking-tight mb-4">8. Governing Law and Jurisdiction</h2>
               <p className="mb-6">
-                We provide experienced regulatory support and consultation, leveraging our established 
-                relationships with licensing authorities to facilitate efficient approval processes.
-              </p>
-
-              <h3 className="text-xl font-semibold mb-3">Spectrum Coordination</h3>
-              <p className="mb-6">
-                Our team manages international spectrum coordination through established ITU processes, 
-                working with multiple administrations to achieve optimal technical parameters and 
-                operational flexibility.
-              </p>
-
-              <h3 className="text-xl font-semibold mb-3">Ongoing Support</h3>
-              <p className="mb-6">
-                We provide continuous regulatory compliance support throughout service periods, 
-                helping clients maintain operational authorization and adapt to regulatory changes.
+                These Terms are governed by Bermuda law. We prefer to resolve disputes through discussion, but Bermuda courts have jurisdiction if needed.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">9. Contact and Dispute Resolution</h2>
+              <h2 className="text-2xl font-bold tracking-tight mb-4">9. Changes to These Terms</h2>
               <p className="mb-6">
-                We encourage resolving disputes through direct communication. For formal disputes, 
-                we support mediation and arbitration as alternatives to litigation, conducted 
-                under Bermuda International Conciliation and Arbitration Act rules.
+                We may update these Terms from time to time. We'll post changes here with a new date. Continuing to use the website means you accept any updates.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">10. Terms Updates</h2>
+              <h2 className="text-2xl font-bold tracking-tight mb-4">10. Severability</h2>
               <p className="mb-6">
-                We may update these Terms periodically. Changes will be posted on our website 
-                with an updated &quot;Last updated&quot; date. Continued website use after changes 
-                constitutes acceptance of updated Terms.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold tracking-tight mb-4">11. Severability</h2>
-              <p className="mb-6">
-                If any provision of these Terms is deemed invalid or unenforceable, the remaining 
-                provisions shall continue in full force and effect.
+                If part of these Terms becomes invalid, the rest remains in effect.
               </p>
             </section>
 
@@ -228,27 +133,20 @@ export default function TermsPage() {
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <Mail className="mr-2 h-5 w-5" />
-                  Questions About These Terms
+                  Contact Us
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="mb-4">
-                  For questions about these Terms of Service, please contact us:
+                  Questions about these terms? Get in touch:
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center">
                     <Mail className="mr-2 h-4 w-4" />
-                    <span>legal@atlanticground.com</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Phone className="mr-2 h-4 w-4" />
-                    <span>+1 (441) 705-1547</span>
+                    <span>info@atlanticground.com</span>
                   </div>
                   <div>
-                    <strong>Business Address:</strong><br />
-                    Atlantic Ground Station<br />
-                    Legal Department<br />
-                    Hamilton, Bermuda
+                    <strong>📬 Atlantic Ground Station, Hamilton, Bermuda</strong>
                   </div>
                 </div>
               </CardContent>

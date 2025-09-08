@@ -173,7 +173,6 @@ Proprietary - All rights reserved
 
 For questions about hosting services or technical support:
 - **Email**: info@atlanticground.com
-- **Phone**: +1 (441) 705-1547
 - **Location**: Hamilton, Bermuda
 
 ---

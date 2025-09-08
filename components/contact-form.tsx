@@ -32,10 +32,13 @@ export function ContactForm({ className }: ContactFormProps) {
   });
 
   const onSubmit = async (data: Omit<ContactFormData, 'hCaptchaToken'>) => {
+    console.log('🚀 Form submission started', { data, submitStatus });
+    
     // Honeypot check - if filled, it's a bot
     const honeypotField = (data as any).website;
     if (honeypotField && honeypotField.trim() !== '') {
       // Silently reject bot submission
+      console.log('🤖 Bot detected, silently rejecting');
       return;
     }
 
@@ -44,6 +47,7 @@ export function ContactForm({ className }: ContactFormProps) {
       console.log('⚠️ Warning: Submitting without hCaptcha token (development mode)');
     }
 
+    console.log('📝 Setting form state to submitting');
     setIsSubmitting(true);
     setSubmitStatus('idle');
     setErrorMessage('');
@@ -60,24 +64,33 @@ export function ContactForm({ className }: ContactFormProps) {
         }),
       });
 
+      console.log('📡 API Response:', { status: response.status, ok: response.ok });
+      
       if (response.ok) {
+        console.log('✅ Success! Setting submitStatus to success');
         setSubmitStatus('success');
-        reset();
         setHCaptchaToken(null);
+        console.log('🎉 Success status set, form will show success message');
       } else {
         const errorData = await response.json();
+        console.log('❌ API Error:', errorData);
         setSubmitStatus('error');
         setErrorMessage(errorData.message || 'Something went wrong. Please try again.');
       }
     } catch (error) {
+      console.log('🚨 Network Error:', error);
       setSubmitStatus('error');
       setErrorMessage('Network error. Please check your connection and try again.');
     } finally {
+      console.log('🏁 Finally block: setting isSubmitting to false');
       setIsSubmitting(false);
     }
   };
 
+  console.log('🎨 Render check:', { submitStatus, isSubmitting });
+  
   if (submitStatus === 'success') {
+    console.log('🎉 Rendering success UI');
     return (
       <Card className={className}>
         <CardContent className="p-8 text-center">
@@ -86,7 +99,11 @@ export function ContactForm({ className }: ContactFormProps) {
           <p className="text-muted-foreground mb-4">
             We&apos;ve received your message and will respond within 24 hours with a detailed proposal.
           </p>
-          <Button onClick={() => setSubmitStatus('idle')}>
+          <Button onClick={() => {
+            console.log('🔄 Resetting to idle state');
+            setSubmitStatus('idle');
+            reset();
+          }}>
             Submit Another Inquiry
           </Button>
         </CardContent>
@@ -238,7 +255,11 @@ export function ContactForm({ className }: ContactFormProps) {
           <div className="border-t pt-6">
             <button
               type="button"
-              onClick={() => setShowTechnicalDetails(!showTechnicalDetails)}
+              onClick={() => {
+                console.log('🔧 Technical details toggle clicked', { current: showTechnicalDetails });
+                setShowTechnicalDetails(!showTechnicalDetails);
+                console.log('🔧 Should now be:', !showTechnicalDetails);
+              }}
               className="flex items-center justify-between w-full text-left text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               <span>Technical Details (Optional)</span>
