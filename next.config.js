@@ -31,7 +31,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; form-action 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://hcaptcha.com https://*.hcaptcha.com https://va.vercel-scripts.com https://platform.twitter.com https://syndication.twitter.com; connect-src 'self' https://hcaptcha.com https://*.hcaptcha.com https://vitals.vercel-insights.com; frame-src https://hcaptcha.com https://*.hcaptcha.com https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com https://platform.twitter.com https://syndication.twitter.com https://twitter.com https://x.com; upgrade-insecure-requests;"
+            value: "default-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'; form-action 'none'; img-src 'self' data: https:; style-src 'self'; script-src 'self' https://va.vercel-scripts.com https://platform.twitter.com https://syndication.twitter.com; connect-src 'self' https://vitals.vercel-insights.com; frame-src https://www.youtube.com https://youtube.com https://www.youtube-nocookie.com https://platform.twitter.com https://syndication.twitter.com https://twitter.com https://x.com; upgrade-insecure-requests;"
           },
           {
             key: 'Strict-Transport-Security',

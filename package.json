@@ -16,8 +16,6 @@
     "schema:check": "echo 'Schema validation would run here - install structured-data-testing-tool for production'"
   },
   "dependencies": {
-    "@hcaptcha/react-hcaptcha": "^1.10.1",
-    "@hookform/resolvers": "^3.3.2",
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
     "@next/mdx": "^14.0.4",
@@ -36,11 +34,8 @@
     "plausible-tracker": "^0.3.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.48.2",
-    "resend": "2.1.0",
     "tailwind-merge": "^2.2.0",
-    "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.22.4"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@lhci/cli": "^0.12.0",

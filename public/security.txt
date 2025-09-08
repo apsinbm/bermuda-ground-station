@@ -1,16 +1,10 @@
 Contact: security@atlanticground.com
-Contact: +1-310-363-6000
 Expires: 2025-12-31T23:59:59.000Z
-Encryption: https://atlanticground.com/pgp-key.asc
-Acknowledgments: https://atlanticground.com/security-acknowledgments
-Policy: https://atlanticground.com/security-policy
-Hiring: https://atlanticground.com/careers
 
 # Scope
 This security policy applies to:
 - Main website: atlanticground.com
-- Contact forms and API endpoints
-- Customer portal and documentation
+- Static content and documentation
 - Ground station monitoring systems (customer-facing only)
 
 # Out of Scope

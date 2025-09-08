@@ -115,3 +115,9 @@ jspm_packages/
 
 # TernJS port file
 .tern-port
+
+# OpenCode / local databases
+.opencode/
+*.db
+*.db-shm
+*.db-wal
