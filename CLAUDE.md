@@ -6,6 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a **Atlantic Ground Station** website - a professional Next.js marketing site showcasing satellite ground station hosting services from Bermuda's strategic North Atlantic location. The site targets satellite operators, broadcasters, and global enterprises needing reliable ground infrastructure.
 
+### Infrastructure Heritage
+The site leverages Bermuda's rich telecommunications and space infrastructure history:
+- **60+ Years Space Operations**: NASA tracking stations supporting Mercury, Gemini, Apollo missions
+- **Google's $48M Investment**: Nuvem and Sol cable systems establishing transatlantic connectivity
+- **5 Existing Subsea Cables**: GlobeNet, Challenger, Gemini, CBUS, CB-1 providing global reach
+- **4 ITU Orbital Slots**: Allocated in 1983 for satellite communications operations
+- **National Space Strategy**: 2020-2025 plan positioning Bermuda as space business hub
+
 ## Architecture
 
 ### Tech Stack
@@ -174,3 +182,47 @@ This website represents a **professional satellite ground station hosting servic
 - Real facilities including ground station teleports and rooftop installations
 
 The target audience includes satellite operators, broadcasters, enterprises requiring ground infrastructure, and organizations needing reliable North Atlantic satellite services.
+
+## Research & Documentation
+
+### Comprehensive Documentation
+- **[Infrastructure Overview](docs/BERMUDA_INFRASTRUCTURE.md)**: Complete telecommunications and space infrastructure history
+- **[Space History](docs/SPACE_HISTORY.md)**: NASA tracking stations, ISS observations, satellite operations
+- **[Subsea Cables](docs/SUBSEA_CABLES.md)**: Google's investment and existing cable systems
+
+### Research Sources
+Content is based on extensive research from authoritative sources:
+
+#### Government & Official Sources
+- gov.bm space and satellite strategy documents
+- Bermuda National Space Strategy 2020-2025
+- Government telecommunications infrastructure reports
+- Regulatory Authority sector documentation
+- Planning Department telecommunications guidelines
+
+#### Industry & Technical Sources
+- Google subsea cable project announcements
+- Submarine cable industry reports (submarinenetworks.com)
+- Data center infrastructure documentation
+- Telecommunications sector analysis
+
+#### News & Media Sources
+- Royal Gazette infrastructure articles
+- Space industry publications
+- Technology infrastructure reports
+- Economic development coverage
+
+### Content Strategy
+- **Historical Accuracy**: All dates, investments, and technical specifications verified from official sources
+- **Strategic Positioning**: Emphasizes global connectivity without revealing specific operational details
+- **Professional Tone**: Technical content appropriate for enterprise and government audiences
+- **SEO Optimization**: Infrastructure keywords targeting satellite industry professionals
+- **Privacy Protection**: Geographic references kept general while maintaining credibility
+
+### Content Guidelines
+- Maintain focus on Bermuda's strategic advantages for telecommunications
+- Emphasize professional infrastructure and regulatory framework
+- Include specific technical details that demonstrate expertise
+- Reference historical NASA operations for credibility
+- Highlight Google's investment as validation of strategic position
+- Use industry-standard terminology and specifications

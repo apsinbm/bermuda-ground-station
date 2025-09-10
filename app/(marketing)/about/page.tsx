@@ -5,7 +5,14 @@ import {
   Shield, 
   CheckCircle,
   ArrowRight,
-  Antenna
+  Antenna,
+  Satellite,
+  Cable,
+  Signal,
+  Rocket,
+  Building,
+  Clock,
+  MapPin
 } from 'lucide-react';
 import Link from 'next/link';
 import { generateSEO } from '@/lib/seo';
@@ -225,7 +232,364 @@ export default function AboutPage() {
             </Card>
           </div>
 
-          {/* Buzzwords Section */}
+          {/* Bermuda's Space & Satellite Legacy */}
+          <div>
+            <div className="text-center mb-16">
+              <div className="mb-6 flex justify-center">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                  <Rocket className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight mb-4">
+                Bermuda's Space & Satellite Legacy
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Over six decades of space operations, satellite tracking, and telecommunications infrastructure development
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              <Card>
+                <CardContent className="p-6">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                    <Satellite className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-3">NASA Heritage</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Historical NASA tracking station operations supporting Mercury, Gemini, and Apollo missions. 
+                    Legacy infrastructure established in the 1960s for space program communications.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                    <Globe className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-3">ITU Orbital Slots</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Four satellite orbital slots allocated by the International Telecommunication Union in 1983. 
+                    Strategic positioning for global satellite operations and communications coverage.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                    <Shield className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-3">National Space Strategy</h3>
+                  <p className="text-muted-foreground text-sm">
+                    2020-2025 strategy positioning Bermuda as a space business hub. Streamlined ITU satellite filing 
+                    process with $12,000 flat administrative fee and efficient regulatory framework.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Card className="mb-8">
+              <CardContent className="p-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <h3 className="text-xl font-semibold mb-4">ISS Visibility & Space Observations</h3>
+                    <p className="text-muted-foreground mb-6">
+                      Bermuda's strategic location provides exceptional visibility for International Space Station passes, 
+                      rocket launches, and spacecraft operations. Historical ISS photography includes notable captures 
+                      during Expedition 17 (2008) and by astronaut Chris Hadfield (2013).
+                    </p>
+                    <div className="flex items-start space-x-3">
+                      <Clock className="h-5 w-5 text-primary mt-1" />
+                      <div>
+                        <div className="font-medium text-sm">250-mile orbital altitude coverage</div>
+                        <div className="text-xs text-muted-foreground">90-minute orbital periods with optimal viewing windows</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-muted/30 p-6 rounded-lg">
+                    <h4 className="font-semibold mb-3">Space Activity Tracking</h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">SpaceX launches visible</span>
+                        <span className="font-medium">8 min post-launch</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">NASA experiments tracked</span>
+                        <span className="font-medium">250+ mi altitude</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-muted-foreground">ISS pass frequency</span>
+                        <span className="font-medium">Every 90 minutes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Digital Infrastructure Hub */}
+          <div>
+            <div className="text-center mb-16">
+              <div className="mb-6 flex justify-center">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                  <Cable className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight mb-4">
+                Digital Infrastructure Hub
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Strategic subsea cable landing point connecting three continents with enterprise-grade infrastructure
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              <Card className="lg:col-span-2">
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    <Building className="mr-2 h-5 w-5" />
+                    Google's Atlantic Investment
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold mb-3">Nuvem Cable (2026)</h4>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li>• South Carolina → Bermuda → Portugal</li>
+                        <li>• First transatlantic fiber optic route via Bermuda</li>
+                        <li>• Up to 20 new jobs created</li>
+                        <li>• Enhanced network reliability and reduced latency</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-3">Sol Cable</h4>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li>• Florida → Bermuda → Azores → Spain</li>
+                        <li>• Only direct fiber connection Florida-Europe</li>
+                        <li>• Cloud traffic and AI model transmission</li>
+                        <li>• Unprecedented transatlantic redundancy</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="mt-6 p-4 bg-muted/30 rounded-lg">
+                    <div className="grid grid-cols-2 gap-4 text-center">
+                      <div>
+                        <div className="text-2xl font-bold text-primary">$48M</div>
+                        <div className="text-sm text-muted-foreground">Google Investment</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-primary">4</div>
+                        <div className="text-sm text-muted-foreground">Cable Capacity</div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card>
+                <CardContent className="p-6">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                    <MapPin className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-3">St. David's Landing Station</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Purpose-built cable landing station at Southside capable of accommodating up to four subsea 
+                    fiber optic cables with redundant power and climate control systems.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                    <Signal className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-3">Existing Cable Systems</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Five operational subsea cables: GlobeNet, Challenger, Gemini, CBUS, and CB-1 providing 
+                    established connectivity to Americas, Europe, and Caribbean regions.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardContent className="p-6">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                    <Globe className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-3">Global Network Architecture</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Permanent fixture in global routing architecture supporting cloud traffic, expanded local 
+                    provider capacity, and next-generation digital infrastructure requirements.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Telecommunications Evolution */}
+          <div>
+            <div className="text-center mb-16">
+              <div className="mb-6 flex justify-center">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                  <Antenna className="h-8 w-8 text-primary" />
+                </div>
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight mb-4">
+                Telecommunications Evolution
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                From monopoly to competitive market leadership driving innovation in the "Silicon Valley of the Caribbean"
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Market Development Timeline</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                      <div>
+                        <div className="font-medium">1983 - ITU Orbital Allocations</div>
+                        <div className="text-sm text-muted-foreground">Four satellite slots allocated for telecommunications</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                      <div>
+                        <div className="font-medium">2013 - Market Liberalization</div>
+                        <div className="text-sm text-muted-foreground">End of Cable & Wireless monopoly, competitive market opens</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                      <div>
+                        <div className="font-medium">2020 - Submarine Cable Legislation</div>
+                        <div className="text-sm text-muted-foreground">Clear framework attracts international investment</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                      <div>
+                        <div className="font-medium">2024+ - Digital Hub Vision</div>
+                        <div className="text-sm text-muted-foreground">5G networks and global cable investments</div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Current Infrastructure</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="font-semibold mb-2">Mobile Networks</h4>
+                      <div className="text-sm text-muted-foreground space-y-1">
+                        <div>• 3 operators: Digicel, One Communications, Paradise Mobile</div>
+                        <div>• 5G deployment with "world's fastest" network ambition</div>
+                        <div>• Paradise Mobile targeting Silicon Valley comparison</div>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Internet & Data</h4>
+                      <div className="text-sm text-muted-foreground space-y-1">
+                        <div>• 4 Internet Service Providers with fiber networks</div>
+                        <div>• Expanded cloud and cybersecurity services</div>
+                        <div>• Enhanced infrastructure investments post-2020</div>
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">Regulatory Innovation</h4>
+                      <div className="text-sm text-muted-foreground space-y-1">
+                        <div>• Streamlined satellite filing process</div>
+                        <div>• Clear timeline and fee structures</div>
+                        <div>• Competitive international frameworks</div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Strategic Advantages */}
+          <div>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tight mb-4">
+                Strategic Advantages Summary
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Comprehensive advantages that position Bermuda as the premier Atlantic telecommunications hub
+              </p>
+            </div>
+            
+            <Card>
+              <CardContent className="p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="text-center">
+                    <div className="mb-3 flex justify-center">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                        <Globe className="h-6 w-6 text-primary" />
+                      </div>
+                    </div>
+                    <h3 className="font-semibold mb-2">Geographic Positioning</h3>
+                    <p className="text-sm text-muted-foreground">
+                      700+ miles from mainland, optimal coverage for North America and Europe with minimal RF interference
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="mb-3 flex justify-center">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                        <Shield className="h-6 w-6 text-primary" />
+                      </div>
+                    </div>
+                    <h3 className="font-semibold mb-2">Regulatory Framework</h3>
+                    <p className="text-sm text-muted-foreground">
+                      English common law, streamlined ITU processes, and competitive international compliance standards
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="mb-3 flex justify-center">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                        <Building className="h-6 w-6 text-primary" />
+                      </div>
+                    </div>
+                    <h3 className="font-semibold mb-2">Infrastructure Investment</h3>
+                    <p className="text-sm text-muted-foreground">
+                      $48M Google commitment, hurricane-rated facilities, and enterprise-grade power systems
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="mb-3 flex justify-center">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                        <Clock className="h-6 w-6 text-primary" />
+                      </div>
+                    </div>
+                    <h3 className="font-semibold mb-2">Time Zone Alignment</h3>
+                    <p className="text-sm text-muted-foreground">
+                      Atlantic Standard Time optimal for US East Coast coordination and European business hours
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Technical Excellence */}
           <div className="text-center">
             <Card className="max-w-4xl mx-auto">
               <CardHeader>

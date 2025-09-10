@@ -16,6 +16,15 @@ This Next.js 14 website showcases comprehensive ground station hosting services 
 - **Real Facilities**: Actual photos of satellite farms and rooftop installations
 - **Space Activity**: Live sightings including SpaceX launches and NASA experiments
 - **Enterprise Focus**: Carrier-grade services for satellite operators, broadcasters, and global enterprises
+- **Infrastructure Heritage**: 60+ years of space operations and modern digital infrastructure
+
+## 📚 Documentation
+
+Comprehensive documentation about Bermuda's telecommunications and space infrastructure:
+
+- **[Infrastructure Overview](docs/BERMUDA_INFRASTRUCTURE.md)**: Complete telecommunications and space infrastructure history
+- **[Space History](docs/SPACE_HISTORY.md)**: NASA tracking stations, ISS observations, and satellite operations
+- **[Subsea Cables](docs/SUBSEA_CABLES.md)**: Google's $48M investment and existing cable systems
 
 ## 🚀 Key Features
 
