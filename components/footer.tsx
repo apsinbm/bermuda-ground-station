@@ -5,8 +5,11 @@ import { Satellite, Mail, Phone, MapPin } from 'lucide-react';
 const footerNavigation = {
   main: [
     { name: 'Services', href: '/services' },
-    { name: 'Locations', href: '/locations' },
     { name: 'About', href: '/about' },
+    { name: 'Ground Locations', href: '/locations' },
+    { name: 'Space Operations', href: '/sightings' },
+    { name: 'Why Bermuda', href: '/why-bermuda' },
+    { name: 'Legacy', href: '/heritage' },
     { name: 'Contact', href: '/contact' },
   ],
   legal: [

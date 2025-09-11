@@ -9,9 +9,11 @@ import { Satellite, Menu, X } from 'lucide-react';
 
 const navigation = [
   { name: 'Services', href: '/services' },
-  { name: 'Locations', href: '/locations' },
-  { name: 'Space Operations', href: '/sightings' },
   { name: 'About', href: '/about' },
+  { name: 'Ground Locations', href: '/locations' },
+  { name: 'Space Operations', href: '/sightings' },
+  { name: 'Why Bermuda', href: '/why-bermuda' },
+  { name: 'Legacy', href: '/heritage' },
 ];
 
 export function Header() {
@@ -44,11 +46,6 @@ export function Header() {
               {item.name}
             </Link>
           ))}
-          <div className="flex items-center space-x-4">
-            <Link href="/contact">
-              <Button>Contact</Button>
-            </Link>
-          </div>
         </div>
 
         <div className="lg:hidden">
