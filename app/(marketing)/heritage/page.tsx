@@ -98,27 +98,59 @@ export default function HeritagePage() {
             {/* ISS Visibility Tweets */}
             <div>
               <h3 className="text-xl font-semibold mb-6 text-center">ISS Visibility & Space Observations</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <TwitterEmbed 
-                  tweetUrl="https://x.com/ISS_Research/status/1742978842826846322"
-                  className="flex-1"
-                />
-                <TwitterEmbed 
-                  tweetUrl="https://x.com/ISS_Research/status/1743011856817643908"
-                  className="flex-1"
-                />
-                <TwitterEmbed 
-                  tweetUrl="https://x.com/ISS_Research/status/1742615890506588362"
-                  className="flex-1"
-                />
-                <TwitterEmbed 
-                  tweetUrl="https://x.com/ISS_Research/status/1742604475316805906"
-                  className="flex-1"
-                />
-                <TwitterEmbed 
-                  tweetUrl="https://x.com/Cmdr_Hadfield/status/327047647489843201"
-                  className="flex-1"
-                />
+              
+              {/* ISS Research & Astronaut Photography */}
+              <div className="mb-8">
+                <h4 className="text-lg font-medium mb-4 text-center text-muted-foreground">ISS Research & Astronaut Photography</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <TwitterEmbed 
+                    tweetUrl="https://x.com/ISS_Research/status/1742978842826846322"
+                    className="flex-1"
+                  />
+                  <TwitterEmbed 
+                    tweetUrl="https://x.com/ISS_Research/status/1743011856817643908"
+                    className="flex-1"
+                  />
+                  <TwitterEmbed 
+                    tweetUrl="https://x.com/ISS_Research/status/1742615890506588362"
+                    className="flex-1"
+                  />
+                  <TwitterEmbed 
+                    tweetUrl="https://x.com/ISS_Research/status/1742604475316805906"
+                    className="flex-1"
+                  />
+                  <TwitterEmbed 
+                    tweetUrl="https://x.com/Cmdr_Hadfield/status/327047647489843201"
+                    className="flex-1"
+                  />
+                </div>
+              </div>
+
+              {/* Launch Tracking & Space Observations */}
+              <div>
+                <h4 className="text-lg font-medium mb-4 text-center text-muted-foreground">Launch Tracking & Space Observations</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <TwitterEmbed 
+                    tweetUrl="https://x.com/RocketmanJRS/status/1016692424670830593"
+                    className="flex-1"
+                  />
+                  <TwitterEmbed 
+                    tweetUrl="https://x.com/ISSAboveYou/status/1750635814143603140"
+                    className="flex-1"
+                  />
+                  <TwitterEmbed 
+                    tweetUrl="https://x.com/AmericaSpace/status/1312201163266125825"
+                    className="flex-1"
+                  />
+                  <TwitterEmbed 
+                    tweetUrl="https://x.com/Crafty_B/status/1268727804289413122"
+                    className="flex-1"
+                  />
+                  <TwitterEmbed 
+                    tweetUrl="https://x.com/ISSAboveYou/status/1750635236785049870"
+                    className="flex-1"
+                  />
+                </div>
               </div>
             </div>
           </div>
