@@ -16,13 +16,6 @@ export const metadata = generateSEO({
 const mediaItems = [
   {
     type: 'youtube',
-    videoId: 'AUBe-2QlWfQ',
-    title: 'SpaceX Launch from Bermuda - Latest Observation',
-    date: 'December 2025',
-    description: 'Recent SpaceX mission captured from Bermuda\'s strategic North Atlantic location. Our ground station facilities provide exceptional visibility for tracking launch trajectories and spacecraft operations across the Atlantic corridor.'
-  },
-  {
-    type: 'youtube',
     videoId: 'BIDwYE-GUVw',
     title: 'SpaceX Falcon 9 Launch Visibility from Bermuda',
     date: 'September 11, 2025',
@@ -48,6 +41,13 @@ const mediaItems = [
     title: 'SpaceX Crew-10 Mission - Extended Bermuda Coverage',
     date: 'March 14, 2025',
     description: 'Extended coverage of the SpaceX Crew-10 Dragon mission from Bermuda\'s strategic position. Comprehensive documentation of the launch sequence and visual phenomena as the spacecraft headed to the International Space Station with its crew of four astronauts.'
+  },
+  {
+    type: 'youtube',
+    videoId: 'AUBe-2QlWfQ',
+    title: 'SpaceX Crew-10 Launch - Fourth Bermuda Angle',
+    date: 'March 14, 2025',
+    description: 'Additional coverage of the historic SpaceX Crew-10 Dragon launch captured from Bermuda. This fourth perspective completes our comprehensive documentation of the mission as observed from our strategic North Atlantic position.'
   },
   {
     type: 'youtube-shorts',
