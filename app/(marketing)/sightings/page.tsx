@@ -16,6 +16,13 @@ export const metadata = generateSEO({
 const mediaItems = [
   {
     type: 'youtube',
+    videoId: 'AUBe-2QlWfQ',
+    title: 'SpaceX Launch from Bermuda - Latest Observation',
+    date: 'December 2025',
+    description: 'Recent SpaceX mission captured from Bermuda\'s strategic North Atlantic location. Our ground station facilities provide exceptional visibility for tracking launch trajectories and spacecraft operations across the Atlantic corridor.'
+  },
+  {
+    type: 'youtube',
     videoId: 'BIDwYE-GUVw',
     title: 'SpaceX Falcon 9 Launch Visibility from Bermuda',
     date: 'September 11, 2025',
