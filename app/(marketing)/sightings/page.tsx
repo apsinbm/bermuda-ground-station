@@ -29,6 +29,20 @@ const mediaItems = [
     description: 'Incredible dual perspective: SpaceX live broadcast on laptop alongside real rocket creating spectacular "jellyfish effect" in Bermuda\'s night sky. Crew-10 mission with NASA astronauts Anne McClain, Nichole Ayers, JAXA\'s Takuya Onishi, and Roscosmos\' Kirill Peskov heading to the ISS. Visible just 8 minutes after launch from Kennedy Space Center.'
   },
   {
+    type: 'youtube',
+    videoId: '-lK3fSBu6n0',
+    title: 'SpaceX Crew-10 Launch - Additional Bermuda Perspective',
+    date: 'March 14, 2025',
+    description: 'Alternative view of the SpaceX Crew-10 Dragon launch captured from Bermuda. This footage provides a different perspective of the same historic mission, showing the rocket\'s trajectory and exhaust plume as observed from our North Atlantic vantage point.'
+  },
+  {
+    type: 'youtube',
+    videoId: 'pxYuRxF21mk',
+    title: 'SpaceX Crew-10 Mission - Extended Bermuda Coverage',
+    date: 'March 14, 2025',
+    description: 'Extended coverage of the SpaceX Crew-10 Dragon mission from Bermuda\'s strategic position. Comprehensive documentation of the launch sequence and visual phenomena as the spacecraft headed to the International Space Station with its crew of four astronauts.'
+  },
+  {
     type: 'youtube-shorts',
     videoId: '_umRXaSBypU',
     title: 'SpaceX Falcon 9 Bandwagon-1 Launch Over Bermuda',
