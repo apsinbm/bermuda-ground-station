@@ -16,6 +16,13 @@ export const metadata = generateSEO({
 const mediaItems = [
   {
     type: 'youtube',
+    videoId: 'BIDwYE-GUVw',
+    title: 'SpaceX Falcon 9 Launch Visibility from Bermuda',
+    date: 'September 11, 2025',
+    description: 'Latest SpaceX Falcon 9 mission captured from Bermuda\'s strategic North Atlantic position. Excellent visibility of the launch trajectory and staging sequence as observed from our ground station facilities.'
+  },
+  {
+    type: 'youtube',
     videoId: 'x9zIuyUkk6g',
     title: 'SpaceX Crew-10 Dragon "Endurance" - Jellyfish Effect Over Bermuda',
     date: 'March 14, 2025',
