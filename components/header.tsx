@@ -11,7 +11,7 @@ const navigation = [
   { name: 'Services', href: '/services' },
   { name: 'About', href: '/about' },
   { name: 'Ground Locations', href: '/locations' },
-  { name: 'Space Operations', href: '/sightings' },
+  { name: 'Rocket Launches', href: '/sightings' },
   { name: 'Why Bermuda', href: '/why-bermuda' },
   { name: 'Legacy', href: '/heritage' },
 ];
