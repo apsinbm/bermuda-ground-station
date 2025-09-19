@@ -23,7 +23,7 @@ import { generateSEO } from '@/lib/seo';
 
 export const metadata = generateSEO({
   title: 'Teleport & Earth Station Services - Ground Station Hosting Bermuda',
-  description: 'Professional teleport and earth station services in Bermuda. Antenna hosting, NOC support, and licensing assistance with carrier-grade infrastructure.',
+  description: 'Comprehensive satellite teleport services in Bermuda. Antenna hosting, 24/7 NOC support, licensing assistance, and carrier-grade infrastructure.',
 });
 
 

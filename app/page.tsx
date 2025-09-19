@@ -7,7 +7,7 @@ import { organizationSchema, localBusinessSchema } from '@/lib/schema';
 
 export const metadata = generateSEO({
   title: 'Bermuda Teleport & Ground Station Hosting - North Atlantic Earth Station',
-  description: 'Professional teleport and ground station hosting in Bermuda. Dedicated earth station facilities and rooftop sites with carrier-grade infrastructure and 30+ years experience.',
+  description: 'Professional satellite ground station hosting in Bermuda. 24/7 NOC support, carrier-grade infrastructure, and strategic North Atlantic positioning.',
 });
 
 export default function HomePage() {

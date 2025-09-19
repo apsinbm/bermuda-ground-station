@@ -17,7 +17,7 @@ import { generateSEO } from '@/lib/seo';
 
 export const metadata = generateSEO({
   title: 'Why Bermuda - Strategic North Atlantic Satellite Location',
-  description: 'Discover why Bermuda\'s strategic North Atlantic location offers unmatched advantages for satellite ground stations, teleport services, and global communications.',
+  description: 'Discover why Bermuda offers unmatched advantages for satellite ground stations. Strategic North Atlantic positioning for global communications.',
 });
 
 export default function WhyBermudaPage() {

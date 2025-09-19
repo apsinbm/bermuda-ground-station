@@ -16,7 +16,7 @@ import { localBusinessSchema } from '@/lib/schema';
 
 export const metadata = generateSEO({
   title: 'Ground Station & Teleport Facilities in Bermuda',
-  description: 'Dedicated ground station facilities and rooftop hosting sites in Bermuda. Professional teleport services with carrier-grade infrastructure and 24/7 support.',
+  description: 'Explore our Bermuda ground station facilities and rooftop sites. Professional teleport locations with carrier-grade infrastructure and 24/7 support.',
 });
 
 

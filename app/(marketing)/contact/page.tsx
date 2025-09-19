@@ -7,7 +7,7 @@ import { generateSEO } from '@/lib/seo';
 
 export const metadata = generateSEO({
   title: 'Contact - Ground Station Hosting in Bermuda',
-  description: 'Contact us to discuss your ground station hosting requirements in Bermuda. We are here to help with antenna hosting and site solutions.',
+  description: 'Contact Atlantic Ground Station for Bermuda teleport services. Get quotes for antenna hosting, earth station support, and satellite operations.',
 });
 
 const contactMethods = [

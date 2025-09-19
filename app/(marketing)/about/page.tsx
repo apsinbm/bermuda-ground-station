@@ -16,7 +16,7 @@ import { generateSEO } from '@/lib/seo';
 
 export const metadata = generateSEO({
   title: 'About Atlantic Ground Station - Satellite Teleport Services',
-  description: 'Leading satellite ground station and teleport services provider with 30+ years experience. Professional earth station hosting, 24/7 NOC, and carrier-grade infrastructure.',
+  description: 'Leading Bermuda satellite ground station with 30+ years experience. Professional teleport services, 24/7 NOC support, and North Atlantic positioning.',
 });
 
 export default function AboutPage() {
